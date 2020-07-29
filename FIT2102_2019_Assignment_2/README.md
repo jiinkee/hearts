@@ -51,7 +51,7 @@ The code provided uses the Safe pragma to make sure the code you use is okay to 
 
 ### Memory
 An important concept during a game is memory. In this implementation, you can decide what information you want to save between turns, the only condition is it needs to be converted to a `String`. This is shown in the type of the play function:
-```
+```haskell
 type PlayFunc
 =  PlayerId -- ^ this player's Id so they can identify themselves in the bids and tricks
 -> [Card]   -- ^ the player's current hand
