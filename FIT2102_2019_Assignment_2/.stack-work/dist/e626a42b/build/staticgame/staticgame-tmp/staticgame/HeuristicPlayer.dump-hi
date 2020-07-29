@@ -1,0 +1,122 @@
+
+==================== FINAL INTERFACE ====================
+2019-10-17 07:04:27.4764526 UTC
+
+interface main:HeuristicPlayer 8064
+  interface hash: e2d9b712a8e94bda78370e203e734f29
+  ABI hash: f650e224cebc2b8494f6318dcaac2f16
+  export-list hash: 6be77db684b1070407dc32ec3f2af3bd
+  orphan hash: f237e69582bfc989dc22e30690821fac
+  flag hash: 87f038a240ba1c5a2762df5516ceda23
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  HeuristicPlayer.makeBid
+  HeuristicPlayer.playCard
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 hearts-0.1.0.0 integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Control.Applicative 37ad1ecb7adc211899b18378548196ee
+import  -/  base-4.12.0.0:Data.Foldable 6673f41a7644ecd4dda455d741d47ef8
+import  -/  base-4.12.0.0:Data.Functor 7be8e53dff1d6c612350c8ff6725f331
+import  -/  base-4.12.0.0:Data.List ccb3c44b4e7df281b8508bfc1f389d8d
+import  -/  base-4.12.0.0:Data.Maybe 385d0eb722c0cb2347caf44c1967afe7
+import  -/  base-4.12.0.0:Data.OldList cd51cf46346202f55e4ecde7f0f7b58e
+import  -/  base-4.12.0.0:Data.Tuple ddbd97abaf9b62e84e82a5bae338d270
+import  -/  base-4.12.0.0:GHC.Base 954f4c258d193fab7048a63bfeb56dcf
+import  -/  base-4.12.0.0:GHC.Err 3a680f55541fe399f95f794018fc3593
+import  -/  base-4.12.0.0:GHC.List 63f1dc438c14c2ecfce50219fbb7ff35
+import  -/  base-4.12.0.0:GHC.Num 009f4fca9200daff9e3ffbe2d7676a2f
+import  -/  base-4.12.0.0:Prelude aea9afd24db8aed3563d7d850ea453c0
+import  -/  ghc-prim-0.5.3:GHC.Classes 6002495dc43e58d28c87e5e5e058752a
+import  -/  hearts-0.1.0.0:Cards d697d07d040dcb0fea10f2214ac7155e
+import  -/  hearts-0.1.0.0:Hearts.Types a3e1c55fd9fb4edfd15f0d68a5a3797b
+e552affee748f214ca5358bd3a3d356b
+  $smaximum1 :: Cards.Rank
+  {- Strictness: x -}
+16af47518475d14217dde0a95f3832f9
+  $sminimum :: [Cards.Card] -> Cards.Card
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: [Cards.Card]) ->
+                 case w of wild {
+                   [] -> HeuristicPlayer.$sminimum1
+                   : ipv ipv1
+                   -> case ipv of ww { Cards.Card ww1 ww2 ->
+                      case HeuristicPlayer.$wgo ipv1 ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
+                      Cards.Card ww4 ww5 } } }) -}
+afbfab34aef4c43dffff5b7f007081ae
+  $sminimum1 :: Cards.Card
+  {- Strictness: x -}
+49f36dca9d17fd938053493e997d5d75
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   HeuristicPlayer.$trModule3
+                   HeuristicPlayer.$trModule1) -}
+b7c772066d02e010acecea853e093586
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS HeuristicPlayer.$trModule2) -}
+9bd31deb7309b4b5d4d75c0d1fbb0d56
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("HeuristicPlayer"#) -}
+12c24e40c2698d979b69346b254094a7
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS HeuristicPlayer.$trModule4) -}
+94dd7bbcc97fef8035e4ea3c37e440bd
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+e0fab35ce27c0e208605471825fd3167
+  $wgo ::
+    [Cards.Card]
+    -> Cards.Suit -> Cards.Rank -> (# Cards.Suit, Cards.Rank #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U>,
+     Inline: [2] -}
+88d24e2e38be9719f14c3e34c78be40a
+  $wplayCard ::
+    [Cards.Card]
+    -> [(Cards.Card, Hearts.Types.PlayerId)]
+    -> GHC.Maybe.Maybe
+         ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> (# Cards.Card, GHC.Base.String #)
+  {- Arity: 3, Strictness: <L,U><S,U><S,U>, Inline: [2] -}
+12aa098d49c71fdddc0b56b23b07dfc9
+  makeBid :: Hearts.Types.BidFunc
+  {- Strictness: x -}
+1502a4689a5acf3fcd2f7f8f6759cec5
+  playCard :: Hearts.Types.PlayFunc
+  {- Arity: 4, Strictness: <L,A><L,U><S,U><S,U>m, Inline: [2],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: Hearts.Types.PlayerId)
+                   (w1 :: [Cards.Card])
+                   (w2 :: [(Cards.Card, Hearts.Types.PlayerId)])
+                   (w3 :: GHC.Maybe.Maybe
+                            ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 case HeuristicPlayer.$wplayCard w1 w2 w3 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+"SPEC/HeuristicPlayer minimum @ Card" [orphan] forall ($dOrd :: GHC.Classes.Ord
+                                                                  Cards.Card)
+  GHC.List.minimum @ Cards.Card $dOrd = HeuristicPlayer.$sminimum
+trusted: trustworthy
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

@@ -1,0 +1,853 @@
+
+==================== FINAL INTERFACE ====================
+2019-10-04 09:13:46.1620626 UTC
+
+interface hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf:Entries 8064
+  interface hash: 67d1f3a9768d6f60fb3c6456514cc78d
+  ABI hash: d06bed90b34f65007aa4ac4e3b1752e8
+  export-list hash: a5660dc502de271aecf59b5a0fbe001c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f2210fe39acaf2041f023d3ae9a54928
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Entries.playerScoreFile
+  Entries.readPlayers
+  Entries.writeTournament
+module dependencies: Cards Hearts.Types
+package dependencies: Only-0.1 array-0.5.3.0 attoparsec-0.13.2.2
+                      base-4.12.0.0 binary-0.8.6.0 bytestring-0.10.8.2 cassava-0.5.1.0
+                      containers-0.6.0.1 deepseq-1.4.4.0 ghc-prim-0.5.3 hashable-1.2.7.0
+                      integer-gmp-1.0.2.0 integer-logarithms-1.0.3 primitive-0.6.4.0
+                      scientific-0.3.6.2 text-1.2.3.1 text-short-0.1.2
+                      transformers-0.5.6.2 unordered-containers-0.2.9.0 vector-0.12.0.2
+orphans: vector-0.12.0.2:Data.Vector.Unboxed
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.1:Data.Text.Lazy
+         text-1.2.3.1:Data.Text binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         vector-0.12.0.2:Data.Vector.Fusion.Bundle
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: Only-0.1:Data.Tuple.Only
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.12.0.0:Control.Applicative base-4.12.0.0:Data.Complex
+                         base-4.12.0.0:Data.Functor.Compose base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         primitive-0.6.4.0:Data.Primitive.ByteArray
+                         primitive-0.6.4.0:Data.Primitive.PrimArray
+                         primitive-0.6.4.0:Data.Primitive.SmallArray
+                         primitive-0.6.4.0:Data.Primitive.UnliftedArray
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         text-short-0.1.2:Data.Text.Short.Internal
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         vector-0.12.0.2:Data.Vector vector-0.12.0.2:Data.Vector.Primitive
+                         vector-0.12.0.2:Data.Vector.Unboxed
+                         vector-0.12.0.2:Data.Vector.Unboxed.Base
+import  -/  base-4.12.0.0:Data.Either fba39a4162b3f7ea70ac8b931cc25c71
+import  -/  base-4.12.0.0:Data.Functor 7be8e53dff1d6c612350c8ff6725f331
+import  -/  base-4.12.0.0:GHC.Base 954f4c258d193fab7048a63bfeb56dcf
+import  -/  base-4.12.0.0:GHC.Err 3a680f55541fe399f95f794018fc3593
+import  -/  base-4.12.0.0:GHC.IO 83f83859bdb7dbbe970dd7fd763b40dc
+import  -/  base-4.12.0.0:Prelude aea9afd24db8aed3563d7d850ea453c0
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy 025d4bf518698eaace0a5820679c5754
+import  -/  cassava-0.5.1.0:Data.Csv f93aa3539d4453a190e2838d3a9807bf
+import  -/  cassava-0.5.1.0:Data.Csv.Conversion 6c73d798a7d39e76e0855077124e640e
+import  -/  cassava-0.5.1.0:Data.Csv.Encoding 808712aebb94a92b3335b504587b8570
+import  -/  cassava-0.5.1.0:Data.Csv.Types bf023990029e6291209aefa55fba44f2
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  Hearts.Types a3e1c55fd9fb4edfd15f0d68a5a3797b
+  exports: e63188d47c1b60e5775afdff00704e87
+  Player f29520b7638206ecedb9403ebc176da9
+  Player e2943f98cb190d157501cefcaadd0ae0
+import  -/  vector-0.12.0.2:Data.Vector 3a5a1e611b885a022d5a565cead34252
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  $fFromNamedRecordEntry ::
+    Data.Csv.Conversion.FromNamedRecord Entries.Entry
+  DFunId
+  {- Arity: 1, Strictness: <L,U>, Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Entries.$fFromNamedRecordEntry_$cparseNamedRecord
+                  `cast`
+                (Sym (Data.Csv.Conversion.N:FromNamedRecord[0]
+                          <Entries.Entry>_N)) -}
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  $fFromNamedRecordEntry_$cparseNamedRecord ::
+    Data.Csv.Types.NamedRecord
+    -> Data.Csv.Conversion.Parser Entries.Entry
+  {- Arity: 1, Strictness: <L,U> -}
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  $fToNamedRecordEntry ::
+    Data.Csv.Conversion.ToNamedRecord Entries.Entry
+  DFunId
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U(U),1*U(U))>,
+     Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Entries.$fToNamedRecordEntry_$ctoNamedRecord
+                  `cast`
+                (Sym (Data.Csv.Conversion.N:ToNamedRecord[0] <Entries.Entry>_N)) -}
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  $fToNamedRecordEntry_$ctoNamedRecord ::
+    Entries.Entry -> Data.Csv.Types.NamedRecord
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U(U),1*U(U))>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Entries.Entry) ->
+                 case w of ww { Entries.Entry ww1 ww2 ww3 ->
+                 Entries.$w$ctoNamedRecord ww1 ww2 ww3 }) -}
+5315b253bf45abd1557f3017b2ee4433
+  $fToNamedRecordEntry_addr# :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("elo"#) -}
+a890fc9e02128f8e4fad703476b3c5e8
+  $fToNamedRecordEntry_addr#1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("games"#) -}
+99d8ff17084f78fde0a6d4ccd17e0cc0
+  $fToNamedRecordEntry_addr#2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("name"#) -}
+4f71541a75a7db9cb0002fe636a647ee
+  $fToNamedRecordEntry_name :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Entries.$fToNamedRecordEntry_addr#
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Entries.$fToNamedRecordEntry_addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+3cfd904e3353e537ac6417deb4522f39
+  $fToNamedRecordEntry_name1 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Entries.$fToNamedRecordEntry_addr#1
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Entries.$fToNamedRecordEntry_addr#1
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+17aff9f3bbbb409ca3e823fb0a5112d7
+  $fToNamedRecordEntry_name2 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Entries.$fToNamedRecordEntry_addr#2
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Entries.$fToNamedRecordEntry_addr#2
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  $sel:_elo:Entry :: Entries.Entry -> GHC.Types.Float
+  RecSel Left Entries.Entry
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Entries.Entry) ->
+                 case ds of wild { Entries.Entry ds1 ds2 ds3 -> ds3 }) -}
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  $sel:_games:Entry :: Entries.Entry -> GHC.Types.Int
+  RecSel Left Entries.Entry
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Entries.Entry) ->
+                 case ds of wild { Entries.Entry ds1 ds2 ds3 -> ds2 }) -}
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  $sel:_name:Entry :: Entries.Entry -> GHC.IO.FilePath
+  RecSel Left Entries.Entry
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Entries.Entry) ->
+                 case ds of wild { Entries.Entry ds1 ds2 ds3 -> ds1 }) -}
+b3a916a005aad0aeff09ab33d3c9fecd
+  $tc'Entry :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15734465052504831313##
+                   3834686983392884529##
+                   Entries.$trModule
+                   Entries.$tc'Entry2
+                   0#
+                   Entries.$tc'Entry1) -}
+10632cdc195d55a33add66f0f2f2067b
+  $tc'Entry1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+c73892d5ab6c92bb51aee9209d8f2853
+  $tc'Entry2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Entries.$tc'Entry3) -}
+c4f9fe68d37c7ddf7a27f147c9ee460d
+  $tc'Entry3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Entry"#) -}
+c6687b87c19dd8f9c6a6709dda1f72aa
+  $tcEntry :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12869152457432981718##
+                   12088905498388531883##
+                   Entries.$trModule
+                   Entries.$tcEntry1
+                   0#
+                   GHC.Types.krep$*) -}
+6b97a20bf94a8044dfe8101ddadc3757
+  $tcEntry1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Entries.$tcEntry2) -}
+31a0f79fe3d07810e6178aa26788e559
+  $tcEntry2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Entry"#) -}
+0a82cb8d76b138f21bccefe6294fab55
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Entries.$trModule3
+                   Entries.$trModule1) -}
+396b0dc081b4263b1b785318ceda19e0
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Entries.$trModule2) -}
+f028d7f57a21420c4944104e302fa977
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Entries"#) -}
+50b600c128e8d45eac5ecaeaca3db90e
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Entries.$trModule4) -}
+a75648dae4bf753451eda240135135d5
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf"#) -}
+66ea8a1dbe8786321918345de0b0db1b
+  $w$ctoNamedRecord ::
+    GHC.IO.FilePath
+    -> GHC.Types.Int -> GHC.Types.Float -> Data.Csv.Types.NamedRecord
+  {- Arity: 3, Strictness: <L,1*U><L,1*U(U)><L,1*U(U)>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.IO.FilePath)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Float) ->
+                 case Entries.$fToNamedRecordEntry_name2 of ww3 { Data.ByteString.Internal.PS ww4 ww5 ww6 ww7 ->
+                 case Data.Csv.Conversion.$w$sunsafeInsert
+                        @ Data.ByteString.Internal.ByteString
+                        ww4
+                        ww5
+                        ww6
+                        ww7
+                        (case GHC.Magic.runRW#
+                                @ ('GHC.Types.TupleRep
+                                     '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                                (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                 case GHC.Prim.newByteArray#
+                                        @ GHC.Prim.RealWorld
+                                        10#
+                                        s1 of ds1 { (#,#) ipv ipv1 ->
+                                 Entries.$wouter ipv1 4# ww 0# ipv }) of ds1 { (#,#) ipv ipv1 ->
+                         case ipv1 of ww8 { Data.Text.Internal.Text ww9 ww10 ww11 ->
+                         Data.Text.Encoding.$wencodeUtf8 ww9 ww10 ww11 } })
+                        (Data.HashMap.Base.Empty
+                           @ Data.ByteString.Internal.ByteString
+                           @ Data.ByteString.Internal.ByteString) of z { DEFAULT ->
+                 case Entries.$fToNamedRecordEntry_name1 of ww8 { Data.ByteString.Internal.PS ww9 ww10 ww11 ww12 ->
+                 case Data.Csv.Conversion.$w$sunsafeInsert
+                        @ Data.ByteString.Internal.ByteString
+                        ww9
+                        ww10
+                        ww11
+                        ww12
+                        (let {
+                           cs :: Data.ByteString.Lazy.Internal.ByteString
+                           = Data.ByteString.Builder.toLazyByteString
+                               (Data.Csv.Conversion.Internal.decimal_$sformatBoundedSigned4 ww1)
+                         } in
+                         Data.ByteString.Lazy.toStrict_goLen0 cs cs)
+                        z of z1 { DEFAULT ->
+                 case Entries.$fToNamedRecordEntry_name of ww13 { Data.ByteString.Internal.PS ww14 ww15 ww16 ww17 ->
+                 Data.Csv.Conversion.$w$sunsafeInsert
+                   @ Data.ByteString.Internal.ByteString
+                   ww14
+                   ww15
+                   ww16
+                   ww17
+                   (Data.Csv.Conversion.Internal.realFloat_$srealFloat1 ww2)
+                   z1 } } } } }) -}
+1e2c1254ae854252a96613c485cd2e94
+  $wfoldlM_loop ::
+    GHC.Types.SPEC
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.MutableArray# GHC.Prim.RealWorld Data.Csv.Types.Name
+    -> GHC.Prim.Int#
+    -> [Data.Csv.Types.Name]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Vector.Vector Data.Csv.Types.Name #)
+  {- Arity: 7, Strictness: <S,1*U><L,U><L,U><S,U><L,U><S,1*U><S,U>,
+     Inline: [2] -}
+7c90f9bc90c4c8b8ec9d0582e4269b9b
+  $wouter ::
+    GHC.Prim.MutableByteArray# GHC.Prim.RealWorld
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U><S,U><S,1*U><S,U><S,U>,
+     Inline: [2] -}
+7ce0a3c8d7c4db7488731ffe5f0fa498
+  data Entry
+    = Entry {_name :: GHC.IO.FilePath,
+             _games :: GHC.Types.Int,
+             _elo :: GHC.Types.Float}
+24ae11a93bcede6633b14a701a23b6ed
+  entryHeader :: Data.Csv.Types.Header
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                             Data.Vector.Vector Data.Csv.Types.Name #)
+                        Entries.writeTournament7 of ds1 { (#,#) ipv1 ipv2 ->
+                 ipv2 }) -}
+6b5add0ef0606b481c2502ccf59fb285
+  playerScoreFile :: GHC.IO.FilePath
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Entries.playerScoreFile1) -}
+8ac72f31ffb41337b348de8084c6b72e
+  playerScoreFile1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("players.csv"#) -}
+8579739fbe7d390a7c00c57992fcf856
+  readPlayers ::
+    GHC.Types.IO [(GHC.IO.FilePath, GHC.Types.Int, GHC.Types.Float)]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Entries.readPlayers1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0]
+                          <[(GHC.IO.FilePath, GHC.Types.Int, GHC.Types.Float)]>_R)) -}
+596bfca27d5ebe74fb29376a554302c1
+  readPlayers1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [(GHC.IO.FilePath, GHC.Types.Int, GHC.Types.Float)] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openBinaryFile1
+                        Entries.playerScoreFile
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Data.ByteString.Lazy.getContents2
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case Data.Csv.Encoding.$wdecodeByNameWith
+                           @ Entries.Entry
+                           Entries.$fFromNamedRecordEntry_$cparseNamedRecord
+                             `cast`
+                           (Sym (Data.Csv.Conversion.N:FromNamedRecord[0] <Entries.Entry>_N))
+                           44##
+                           ipv3 of wild {
+                      Data.Either.Left err -> Entries.readPlayers2 err
+                      Data.Either.Right ds
+                      -> case ds of wild1 { (,) ds3 v ->
+                         case v of v2 { Data.Vector.Vector ipv4 ipv5 ipv6 ->
+                         letrec {
+                           $wgo :: GHC.Prim.Int#
+                                   -> [(GHC.IO.FilePath, GHC.Types.Int, GHC.Types.Float)]
+                             {- Arity: 1, Strictness: <S,U>, Inline: [2] -}
+                           = \ (ww :: GHC.Prim.Int#) ->
+                             case GHC.Prim.>=# ww ipv5 of lwild {
+                               DEFAULT
+                               -> case GHC.Prim.indexArray#
+                                         @ Entries.Entry
+                                         ipv6
+                                         (GHC.Prim.+# ipv4 ww) of ds4 { Unit# ipv7 ->
+                                  GHC.Types.:
+                                    @ (GHC.IO.FilePath, GHC.Types.Int, GHC.Types.Float)
+                                    (case ipv7 of wild2 { Entries.Entry n g e -> (n, g, e) })
+                                    ($wgo (GHC.Prim.+# ww 1#)) }
+                               1#
+                               -> GHC.Types.[]
+                                    @ (GHC.IO.FilePath, GHC.Types.Int, GHC.Types.Float) }
+                         } in
+                         $wgo 0# } } } #) } }) -}
+f76726beeef57043332dac75f75e0a62
+  readPlayers2 ::
+    GHC.Base.String
+    -> [(GHC.IO.FilePath, GHC.Types.Int, GHC.Types.Float)]
+  {- Arity: 1, Strictness: <B,U>x -}
+aef718782b0d9cbb8aca4363531a322a
+  writeTournament :: [Hearts.Types.Player] -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Entries.writeTournament1
+                  `cast`
+                (<[Hearts.Types.Player]>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+b8fb95c3be506211d3bb6fb3386ca38e
+  writeTournament1 ::
+    [Hearts.Types.Player]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ (updatedPlayers :: [Hearts.Types.Player])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 System.IO.withBinaryFile1
+                   @ ()
+                   Entries.playerScoreFile
+                   GHC.IO.IOMode.WriteMode
+                   (\ (ds :: GHC.IO.Handle.Types.Handle)[OneShot]
+                      (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                    case Entries.writeTournament12 of wild {
+                      GHC.Types.False
+                      -> Data.ByteString.Lazy.appendFile2
+                           ds
+                           (Data.ByteString.Builder.toLazyByteString
+                              (\ @ r ->
+                               let {
+                                 g :: [Data.ByteString.Builder.Internal.Builder]
+                                 = GHC.Base.map
+                                     @ Hearts.Types.Player
+                                     @ Data.ByteString.Builder.Internal.Builder
+                                     Entries.writeTournament11
+                                     updatedPlayers
+                               } in
+                               \ (x :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                               Entries.writeTournament3
+                                 `cast`
+                               (Data.ByteString.Builder.Internal.N:Builder[0])
+                                 @ r
+                                 (let {
+                                    eta2 :: Data.ByteString.Builder.Internal.BuildStep r
+                                    = Data.Csv.Encoding.encode1
+                                        Entries.writeTournament2
+                                          `cast`
+                                        ((forall (r1 :: <*>_N).
+                                          <Data.ByteString.Builder.Internal.BuildStep r1>_R
+                                          ->_R <Data.ByteString.Builder.Internal.BufferRange>_R
+                                          ->_R Sym (GHC.Types.N:IO[0]
+                                                        <Data.ByteString.Builder.Internal.BuildSignal
+                                                           r1>_R)) ; Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
+                                        g
+                                        @ r
+                                        x
+                                  } in
+                                  (\ (eta3 :: Data.ByteString.Builder.Internal.BufferRange)
+                                     (eta4 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                                   case eta3 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
+                                   Data.Csv.Encoding.$wpoly_step
+                                     @ r
+                                     Data.Csv.Encoding.encode2
+                                     eta2
+                                     ww1
+                                     ww2
+                                     eta4 })
+                                    `cast`
+                                  (<Data.ByteString.Builder.Internal.BufferRange>_R
+                                   ->_R Sym (GHC.Types.N:IO[0]
+                                                 <Data.ByteString.Builder.Internal.BuildSignal
+                                                    r>_R))))
+                                `cast`
+                              (Sym (Data.ByteString.Builder.Internal.N:Builder[0])))
+                           eta1
+                      GHC.Types.True
+                      -> case Data.Csv.Encoding.encodeOptionsError
+                         ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                         of {} })
+                     `cast`
+                   (<GHC.IO.Handle.Types.Handle>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   eta) -}
+7b4215f3ca086bd40dec657d302e776f
+  writeTournament10 :: [Data.ByteString.Internal.ByteString]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.ByteString.Internal.ByteString
+                   Entries.$fToNamedRecordEntry_name
+                   (GHC.Types.[] @ Data.ByteString.Internal.ByteString)) -}
+7577a22787d4deee8948e4b9f62a08ff
+  writeTournament11 ::
+    Hearts.Types.Player -> Data.ByteString.Builder.Internal.Builder
+  {- Arity: 1, Strictness: <L,1*U(1*U,A,1*U(U),1*U(U))>,
+     Unfolding: (\ (x :: Hearts.Types.Player) ->
+                 case Entries.entryHeader of ww { Data.Vector.Vector ww1 ww2 ww3 ->
+                 Data.Csv.Encoding.$wencodeNamedRecord
+                   ww1
+                   ww2
+                   ww3
+                   Data.Csv.Encoding.QuoteMinimal
+                   Entries.writeTournament_f2
+                   (case x of wild { Hearts.Types.Player pid ds elo games ->
+                    Entries.$w$ctoNamedRecord pid games elo }) }) -}
+f354dad9f48d332ee615c58500337117
+  writeTournament12 :: GHC.Types.Bool
+  {- Unfolding: (GHC.List.elem
+                   @ GHC.Word.Word8
+                   GHC.Word.$fEqWord8
+                   Entries.writeTournament_f2
+                   Data.Csv.Encoding.encode5) -}
+18550622a478da7525d3ec07d246108a
+  writeTournament2 ::
+    Data.ByteString.Builder.Internal.BuildStep r
+    -> Data.ByteString.Builder.Internal.BufferRange
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.ByteString.Builder.Internal.BuildSignal r #)
+  {- Arity: 3, Strictness: <L,C(C1(U(U,U)))><S(SS),1*U(U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ r
+                   (w1 :: Data.ByteString.Builder.Internal.BuildStep r)
+                   (w2 :: Data.ByteString.Builder.Internal.BufferRange)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w2 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
+                 Data.Csv.Encoding.$wpoly_step
+                   @ r
+                   Data.Csv.Encoding.encode2
+                   w1
+                   ww1
+                   ww2
+                   w3 }) -}
+ccf8d118f7eef5e223927e9c09b9ab09
+  writeTournament3 :: Data.ByteString.Builder.Internal.Builder
+  {- Unfolding: (case Entries.entryHeader of v2 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                 letrec {
+                   $wgo :: GHC.Prim.Int# -> [Data.ByteString.Builder.Internal.Builder]
+                     {- Arity: 1, Strictness: <S,U>, Inline: [2] -}
+                   = \ (ww :: GHC.Prim.Int#) ->
+                     case GHC.Prim.>=# ww ipv1 of lwild {
+                       DEFAULT
+                       -> case GHC.Prim.indexArray#
+                                 @ Data.ByteString.Internal.ByteString
+                                 ipv2
+                                 (GHC.Prim.+# ipv ww) of ds2 { Unit# ipv3 ->
+                          GHC.Types.:
+                            @ Data.ByteString.Builder.Internal.Builder
+                            (let {
+                               bs1 :: Data.ByteString.Internal.ByteString
+                               = case ipv3 of ww2 { Data.ByteString.Internal.PS ww3 ww4 ww5 ww6 ->
+                                 Data.Csv.Encoding.$wescape
+                                   Data.Csv.Encoding.QuoteMinimal
+                                   44##
+                                   ww3
+                                   ww4
+                                   ww5
+                                   ww6 }
+                             } in
+                             (\ @ r
+                                (k :: Data.ByteString.Builder.Internal.BuildStep r)
+                                (br :: Data.ByteString.Builder.Internal.BufferRange)
+                                (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                              case bs1 of wild3 { Data.ByteString.Internal.PS dt1 dt2 dt3 dt4 ->
+                              case k of k1 { DEFAULT ->
+                              case br of wild4 { Data.ByteString.Builder.Internal.BufferRange dt5 dt6 ->
+                              case GHC.Prim.<=# dt4 8160# of lwild1 {
+                                DEFAULT
+                                -> (# eta,
+                                      Data.ByteString.Builder.Internal.InsertChunk
+                                        @ r
+                                        dt5
+                                        wild3
+                                        k1 #)
+                                1#
+                                -> let {
+                                     op' :: GHC.Prim.Addr# = GHC.Prim.plusAddr# dt5 dt4
+                                   } in
+                                   let {
+                                     ip :: GHC.Prim.Addr# = GHC.Prim.plusAddr# dt1 dt3
+                                   } in
+                                   case GHC.Prim.ltAddr# dt6 op' of lwild2 {
+                                     DEFAULT
+                                     -> case {__pkg_ccall base-4.12.0.0 GHC.Prim.Addr#
+                                                                        -> GHC.Prim.Addr#
+                                                                        -> GHC.Prim.Word#
+                                                                        -> GHC.Prim.State#
+                                                                             GHC.Prim.RealWorld
+                                                                        -> (# GHC.Prim.State#
+                                                                                GHC.Prim.RealWorld,
+                                                                              GHC.Prim.Addr# #)}
+                                               dt5
+                                               ip
+                                               (GHC.Prim.int2Word# dt4)
+                                               eta of wild6 { (#,#) ds4 ds5 ->
+                                        case GHC.Prim.touch#
+                                               @ 'GHC.Types.LiftedRep
+                                               @ GHC.ForeignPtr.ForeignPtrContents
+                                               dt2
+                                               ds4 of s' { DEFAULT ->
+                                        (k1 (Data.ByteString.Builder.Internal.BufferRange op' dt6))
+                                          `cast`
+                                        (GHC.Types.N:IO[0]
+                                             <Data.ByteString.Builder.Internal.BuildSignal r>_R)
+                                          s' } }
+                                     1#
+                                     -> Data.ByteString.Builder.Internal.$wwrappedBytesCopyStep
+                                          @ r
+                                          ip
+                                          (GHC.Prim.plusAddr# ip dt4)
+                                          (\ (br1 :: Data.ByteString.Builder.Internal.BufferRange)
+                                             (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                           case GHC.Prim.touch#
+                                                  @ 'GHC.Types.LiftedRep
+                                                  @ GHC.ForeignPtr.ForeignPtrContents
+                                                  dt2
+                                                  s of s' { DEFAULT ->
+                                           (k1 br1)
+                                             `cast`
+                                           (GHC.Types.N:IO[0]
+                                                <Data.ByteString.Builder.Internal.BuildSignal r>_R)
+                                             s' })
+                                            `cast`
+                                          (<Data.ByteString.Builder.Internal.BufferRange>_R
+                                           ->_R Sym (GHC.Types.N:IO[0]
+                                                         <Data.ByteString.Builder.Internal.BuildSignal
+                                                            r>_R))
+                                          dt5
+                                          dt6
+                                          eta } } } } })
+                               `cast`
+                             ((forall (r :: <*>_N).
+                               <Data.ByteString.Builder.Internal.BuildStep r>_R
+                               ->_R <Data.ByteString.Builder.Internal.BufferRange>_R
+                               ->_R Sym (GHC.Types.N:IO[0]
+                                             <Data.ByteString.Builder.Internal.BuildSignal
+                                                r>_R)) ; Sym (Data.ByteString.Builder.Internal.N:Builder[0])))
+                            ($wgo (GHC.Prim.+# ww 1#)) }
+                       1# -> GHC.Types.[] @ Data.ByteString.Builder.Internal.Builder }
+                 } in
+                 case $wgo 0# of wild3 {
+                   []
+                   -> Entries.writeTournament6
+                        `cast`
+                      (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
+                   : x xs
+                   -> (Entries.writeTournament5
+                         (GHC.Types.:
+                            @ Data.ByteString.Builder.Internal.Builder
+                            x
+                            (Data.Csv.Encoding.prependToAll
+                               Entries.writeTournament4
+                                 `cast`
+                               ((forall (r :: <*>_N).
+                                 <Data.ByteString.Builder.Internal.BuildStep r>_R
+                                 ->_R <Data.ByteString.Builder.Internal.BufferRange>_R
+                                 ->_R Sym (GHC.Types.N:IO[0]
+                                               <Data.ByteString.Builder.Internal.BuildSignal
+                                                  r>_R)) ; Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
+                               xs)))
+                        `cast`
+                      (Sym (Data.ByteString.Builder.Internal.N:Builder[0])) } }) -}
+25e05bbececaf9f315159858d69e7e99
+  writeTournament4 ::
+    Data.ByteString.Builder.Internal.BuildStep r
+    -> Data.ByteString.Builder.Internal.BufferRange
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.ByteString.Builder.Internal.BuildSignal r #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,C(C1(U(U,U)))><S(SS),1*U(U,U)><S,U>,
+     Unfolding: (\ @ r
+                   (x1 :: Data.ByteString.Builder.Internal.BuildStep r)
+                   (eta :: Data.ByteString.Builder.Internal.BufferRange)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case eta of wild { Data.ByteString.Builder.Internal.BufferRange dt dt1 ->
+                 case GHC.Prim.<# (GHC.Prim.minusAddr# dt1 dt) 1# of lwild {
+                   DEFAULT
+                   -> case GHC.Prim.writeWord8OffAddr#
+                             @ GHC.Prim.RealWorld
+                             dt
+                             0#
+                             44##
+                             eta1 of s2 { DEFAULT ->
+                      (x1
+                         (Data.ByteString.Builder.Internal.BufferRange
+                            (GHC.Prim.plusAddr# dt 1#)
+                            dt1))
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <Data.ByteString.Builder.Internal.BuildSignal r>_R)
+                        s2 }
+                   1#
+                   -> (# eta1,
+                         Data.ByteString.Builder.Internal.BufferFull
+                           @ r
+                           1#
+                           dt
+                           (\ (ds :: Data.ByteString.Builder.Internal.BufferRange)
+                              (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                            case ds of wild1 { Data.ByteString.Builder.Internal.BufferRange dt2 dt3 ->
+                            case GHC.Prim.writeWord8OffAddr#
+                                   @ GHC.Prim.RealWorld
+                                   dt2
+                                   0#
+                                   44##
+                                   eta2 of s2 { DEFAULT ->
+                            (x1
+                               (Data.ByteString.Builder.Internal.BufferRange
+                                  (GHC.Prim.plusAddr# dt2 1#)
+                                  dt3))
+                              `cast`
+                            (GHC.Types.N:IO[0]
+                                 <Data.ByteString.Builder.Internal.BuildSignal r>_R)
+                              s2 } })
+                             `cast`
+                           (<Data.ByteString.Builder.Internal.BufferRange>_R
+                            ->_R Sym (GHC.Types.N:IO[0]
+                                          <Data.ByteString.Builder.Internal.BuildSignal
+                                             r>_R)) #) } }) -}
+e78f27dee0ac02d8b4424385f62a5c3d
+  writeTournament5 ::
+    [Data.ByteString.Builder.Internal.Builder]
+    -> forall r.
+       Data.ByteString.Builder.Internal.BuildStep r
+       -> Data.ByteString.Builder.Internal.BuildStep r
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,C(U)> -}
+18b4083334112eb48601f0b24d4ed7f6
+  writeTournament6 ::
+    Data.ByteString.Builder.Internal.BuildStep r
+    -> Data.ByteString.Builder.Internal.BufferRange
+    -> GHC.Types.IO (Data.ByteString.Builder.Internal.BuildSignal r)
+  {- Arity: 2, HasNoCafRefs, Strictness: <C(S),1*C1(U)><L,U>,
+     Unfolding: (\ @ r
+                   (cont :: Data.ByteString.Builder.Internal.BuildStep r)
+                   (range :: Data.ByteString.Builder.Internal.BufferRange) ->
+                 cont range) -}
+13f82a427d3faddde57ec8baca1b5724
+  writeTournament7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Vector.Vector Data.Csv.Types.Name #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newArray#
+                        @ Data.Csv.Types.Name
+                        @ (Control.Monad.Primitive.PrimState
+                             (GHC.ST.ST GHC.Prim.RealWorld))
+                        0#
+                        (Data.Vector.Mutable.uninitialised @ Data.Csv.Types.Name)
+                        s1
+                          `cast`
+                        (GHC.Prim.State#
+                           (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                     (Nth:0
+                                          (Nth:2
+                                               (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                ->_R ((#,#)
+                                                        <'GHC.Types.TupleRep '[]>_R
+                                                        <'GHC.Types.LiftedRep>_R
+                                                        <GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                        (Data.Vector.Generic.Base.Mutable
+                                                           <Data.Vector.Vector>_N
+                                                           (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                <GHC.Prim.RealWorld>_N)
+                                                           <Data.Csv.Types.Name>_N)_R)_R))))))_R of ds1 { (#,#) ipv ipv1 ->
+                 Entries.$wfoldlM_loop
+                   GHC.Types.SPEC
+                   0#
+                   0#
+                   ipv1
+                     `cast`
+                   (GHC.Prim.MutableArray#
+                      (Nth:0
+                           (Nth:3
+                                (Nth:3
+                                     (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                      ->_R ((#,#)
+                                              <'GHC.Types.TupleRep '[]>_R
+                                              <'GHC.Types.LiftedRep>_R
+                                              <GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                              (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                               (GHC.ST.ST
+                                                                                                  GHC.Prim.RealWorld)>_N <Data.Csv.Types.Name>_N))_R)) ; Sub (Data.Vector.D:R:MutableVector[0]) (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                                                                                                                                     <GHC.Prim.RealWorld>_N) <Data.Csv.Types.Name>_N))
+                      (Nth:1
+                           (Nth:3
+                                (Nth:3
+                                     (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                      ->_R ((#,#)
+                                              <'GHC.Types.TupleRep '[]>_R
+                                              <'GHC.Types.LiftedRep>_R
+                                              <GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                              (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                               (GHC.ST.ST
+                                                                                                  GHC.Prim.RealWorld)>_N <Data.Csv.Types.Name>_N))_R)) ; Sub (Data.Vector.D:R:MutableVector[0]) (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                                                                                                                                     <GHC.Prim.RealWorld>_N) <Data.Csv.Types.Name>_N)))_R
+                   0#
+                   Entries.writeTournament8
+                   ipv
+                     `cast`
+                   (GHC.Prim.State#
+                      (Control.Monad.Primitive.D:R:PrimStateST[0]
+                           (Nth:0
+                                (Nth:2
+                                     (Nth:3
+                                          (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                           ->_R ((#,#)
+                                                   <'GHC.Types.TupleRep '[]>_R
+                                                   <'GHC.Types.LiftedRep>_R
+                                                   <GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                   (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                    (GHC.ST.ST
+                                                                                                       GHC.Prim.RealWorld)>_N <Data.Csv.Types.Name>_N))_R))))))_R }) -}
+03112eabdd8f6722d4d04d88fa7f9a04
+  writeTournament8 :: [Data.ByteString.Internal.ByteString]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.ByteString.Internal.ByteString
+                   Entries.$fToNamedRecordEntry_name2
+                   Entries.writeTournament9) -}
+8bfb3b4245c10787437e435966919375
+  writeTournament9 :: [Data.ByteString.Internal.ByteString]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.ByteString.Internal.ByteString
+                   Entries.$fToNamedRecordEntry_name1
+                   Entries.writeTournament10) -}
+ea4d9dc1aaa126370787aafc548eb7a8
+  writeTournament_f2 :: GHC.Word.Word8
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W8# 44##) -}
+instance Data.Csv.Conversion.FromNamedRecord [Entries.Entry]
+  = Entries.$fFromNamedRecordEntry
+instance Data.Csv.Conversion.ToNamedRecord [Entries.Entry]
+  = Entries.$fToNamedRecordEntry
+trusted: trustworthy
+require own pkg trusted: True
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

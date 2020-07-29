@@ -1,0 +1,502 @@
+
+==================== FINAL INTERFACE ====================
+2019-10-04 09:13:41.8723582 UTC
+
+interface hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf:EitherIO 8064
+  interface hash: d5110eef3cd740415e8f1831c33da234
+  ABI hash: 98810dc896adc4cc136dbb3b59836b29
+  export-list hash: eb310b7d1d6d8e21c41939b03f986d64
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8042b2e00b4bf5445e871ad940a72bd8
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  EitherIO.liftEither
+  EitherIO.liftIO
+  EitherIO.EitherIO{EitherIO.EitherIO runEitherIO}
+module dependencies:
+package dependencies: base-4.12.0.0 ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Control.Applicative 37ad1ecb7adc211899b18378548196ee
+import  -/  base-4.12.0.0:Data.Either fba39a4162b3f7ea70ac8b931cc25c71
+import  -/  base-4.12.0.0:GHC.Base 954f4c258d193fab7048a63bfeb56dcf
+import  -/  base-4.12.0.0:Prelude aea9afd24db8aed3563d7d850ea453c0
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+846799ff2be220fe9a9dd1e317274646
+  $fApplicativeEitherIO :: GHC.Base.Applicative (EitherIO.EitherIO e)
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ e.
+                  @ (EitherIO.EitherIO e)
+                  (EitherIO.$fFunctorEitherIO @ e)
+                  (\ @ a -> EitherIO.$fApplicativeEitherIO5 @ a @ e)
+                    `cast`
+                  (forall (a :: <*>_N).
+                   <a>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e a>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <a>_R))
+                  (EitherIO.$fApplicativeEitherIO4 @ e)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <EitherIO.EitherIO e (a -> b)>_R
+                   ->_R <EitherIO.EitherIO e a>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e b>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <b>_R))
+                  (EitherIO.$fApplicativeEitherIO3 @ e)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N) (c :: <*>_N).
+                   <a -> b -> c>_R
+                   ->_R <EitherIO.EitherIO e a>_R
+                   ->_R <EitherIO.EitherIO e b>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e c>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <c>_R))
+                  (\ @ a @ b -> EitherIO.$fApplicativeEitherIO2 @ b @ e @ a)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <EitherIO.EitherIO e a>_R
+                   ->_R <EitherIO.EitherIO e b>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e b>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <b>_R))
+                  (\ @ a @ b -> EitherIO.$fApplicativeEitherIO1 @ a @ b @ e)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <EitherIO.EitherIO e a>_R
+                   ->_R <EitherIO.EitherIO e b>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e a>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <a>_R)) -}
+846799ff2be220fe9a9dd1e317274646
+  $fApplicativeEitherIO1 ::
+    EitherIO.EitherIO e a
+    -> EitherIO.EitherIO e b
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e a #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S(SL)),1*C1(U(U,1*U))><L,1*C1(U(U,1*U))><S,U>,
+     Unfolding: (\ @ a
+                   @ b
+                   @ e
+                   (x :: EitherIO.EitherIO e a)
+                   (eta :: EitherIO.EitherIO e b)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case x `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e a>_R)
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 case eta
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <b>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e b>_R)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case ipv1 of wild {
+                      Data.Either.Left x1 -> wild
+                      Data.Either.Right y
+                      -> case ipv3 of wild1 {
+                           Data.Either.Left x1 -> Data.Either.Left @ e @ a x1
+                           Data.Either.Right y1 -> wild } } #) } }) -}
+846799ff2be220fe9a9dd1e317274646
+  $fApplicativeEitherIO2 ::
+    EitherIO.EitherIO e a
+    -> EitherIO.EitherIO e b
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e b #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S(SL)),1*C1(U(U,1*U))><L,1*C1(U(U,1*U))><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b
+                   @ e
+                   @ a
+                   (a1 :: EitherIO.EitherIO e a)
+                   (a2 :: EitherIO.EitherIO e b)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case a1
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e a>_R)
+                        s of ds { (#,#) ipv ipv1 ->
+                 case a2
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <b>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e b>_R)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case ipv1 of wild {
+                      Data.Either.Left x -> Data.Either.Left @ e @ b x
+                      Data.Either.Right y -> ipv3 } #) } }) -}
+846799ff2be220fe9a9dd1e317274646
+  $fApplicativeEitherIO3 ::
+    (a -> b -> c)
+    -> EitherIO.EitherIO e a
+    -> EitherIO.EitherIO e b
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e c #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*C1(C1(U))><C(S(SL)),1*C1(U(U,1*U))><L,1*C1(U(U,1*U))><S,U>,
+     Unfolding: (\ @ e
+                   @ a
+                   @ b
+                   @ c
+                   (f1 :: a -> b -> c)
+                   (x :: EitherIO.EitherIO e a)
+                   (eta :: EitherIO.EitherIO e b)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case x `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e a>_R)
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 case eta
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <b>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e b>_R)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case ipv1 of wild {
+                      Data.Either.Left x1 -> Data.Either.Left @ e @ c x1
+                      Data.Either.Right y
+                      -> case ipv3 of wild1 {
+                           Data.Either.Left x1 -> Data.Either.Left @ e @ c x1
+                           Data.Either.Right y1
+                           -> Data.Either.Right @ e @ c (f1 y y1) } } #) } }) -}
+846799ff2be220fe9a9dd1e317274646
+  $fApplicativeEitherIO4 ::
+    EitherIO.EitherIO e (a -> b)
+    -> EitherIO.EitherIO e a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e b #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S(SL)),1*C1(U(U,1*U))><L,1*C1(U(U,1*U))><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ e
+                   @ a
+                   @ b
+                   (f :: EitherIO.EitherIO e (a -> b))
+                   (x :: EitherIO.EitherIO e a)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case f `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a -> b>_R ; GHC.Types.N:IO[0]
+                                                                     <Data.Either.Either
+                                                                        e (a -> b)>_R)
+                        s of ds { (#,#) ipv ipv1 ->
+                 case x `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e a>_R)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Data.Either.$fApplicativeEither_$c<*>
+                      @ e
+                      @ a
+                      @ b
+                      ipv1
+                      ipv3 #) } }) -}
+bf43af1a6197ed39510cec7e3be1c3a8
+  $fApplicativeEitherIO5 ::
+    a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e a #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ e (x :: a) (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# s, Data.Either.Right @ e @ a x #)) -}
+846799ff2be220fe9a9dd1e317274646
+  $fFunctorEitherIO :: GHC.Base.Functor (EitherIO.EitherIO e)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ e.
+                  @ (EitherIO.EitherIO e)
+                  (EitherIO.$fFunctorEitherIO2 @ e)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <a -> b>_R
+                   ->_R <EitherIO.EitherIO e a>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e b>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <b>_R))
+                  (EitherIO.$fFunctorEitherIO1 @ e)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <a>_R
+                   ->_R <EitherIO.EitherIO e b>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e a>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <a>_R)) -}
+846799ff2be220fe9a9dd1e317274646
+  $fFunctorEitherIO1 ::
+    a
+    -> EitherIO.EitherIO e b
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e a #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U><C(S(SL)),1*C1(U(U,1*U))><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ e
+                   @ a
+                   @ b
+                   (x :: a)
+                   (eta :: EitherIO.EitherIO e b)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case eta
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <b>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e b>_R)
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    case ipv1 of wild {
+                      Data.Either.Left x1 -> Data.Either.Left @ e @ a x1
+                      Data.Either.Right y -> Data.Either.Right @ e @ a x } #) }) -}
+846799ff2be220fe9a9dd1e317274646
+  $fFunctorEitherIO2 ::
+    (a -> b)
+    -> EitherIO.EitherIO e a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e b #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S(SL)),1*C1(U(U,1*U))><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ e
+                   @ a
+                   @ b
+                   (f :: a -> b)
+                   (eta :: EitherIO.EitherIO e a)
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case eta
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e a>_R)
+                        eta1 of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    Data.Either.$fApplicativeEither_$cfmap @ e @ a @ b f ipv1 #) }) -}
+846799ff2be220fe9a9dd1e317274646
+  $fMonadEitherIO :: GHC.Base.Monad (EitherIO.EitherIO e)
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun: @ e.
+                  @ (EitherIO.EitherIO e)
+                  (EitherIO.$fApplicativeEitherIO @ e)
+                  (EitherIO.$fMonadEitherIO1 @ e)
+                    `cast`
+                  (forall (a :: <*>_N) (b :: <*>_N).
+                   <EitherIO.EitherIO e a>_R
+                   ->_R <a -> EitherIO.EitherIO e b>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e b>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <b>_R))
+                  (EitherIO.$fMonadEitherIO_$c>> @ e)
+                  (\ @ a -> EitherIO.$fApplicativeEitherIO5 @ a @ e)
+                    `cast`
+                  (forall (a :: <*>_N).
+                   <a>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <Data.Either.Either e a>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                        <e>_R <a>_R))
+                  (\ @ a ->
+                   GHC.Err.errorWithoutStackTrace
+                     @ 'GHC.Types.LiftedRep
+                     @ (EitherIO.EitherIO e a)) -}
+846799ff2be220fe9a9dd1e317274646
+  $fMonadEitherIO1 ::
+    EitherIO.EitherIO e a
+    -> (a -> EitherIO.EitherIO e b)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e b #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S(SS)),1*C1(U(U,1*U))><L,1*C1(C1(U(U,U)))><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ e
+                   @ a
+                   @ b
+                   (x :: EitherIO.EitherIO e a)
+                   (f :: a -> EitherIO.EitherIO e b)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case x `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e a>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   Data.Either.Left x1 -> (# ipv, Data.Either.Left @ e @ b x1 #)
+                   Data.Either.Right y
+                   -> (f y)
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <b>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e b>_R)
+                        ipv } }) -}
+846799ff2be220fe9a9dd1e317274646
+  $fMonadEitherIO_$c>> ::
+    EitherIO.EitherIO e a
+    -> EitherIO.EitherIO e b -> EitherIO.EitherIO e b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S(SS)),1*C1(U(U,1*U))><L,1*C1(U(U,U))><S,U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ e
+                   @ a
+                   @ b
+                   (m1 :: EitherIO.EitherIO e a)
+                   (k :: EitherIO.EitherIO e b)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case m1
+                        `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <a>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e a>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   Data.Either.Left x -> (# ipv, Data.Either.Left @ e @ b x #)
+                   Data.Either.Right y
+                   -> k `cast`
+                      (EitherIO.N:EitherIO[0] <e>_R <b>_R ; GHC.Types.N:IO[0]
+                                                                <Data.Either.Either e b>_R)
+                        ipv } })
+                  `cast`
+                (forall (e :: <*>_N) (a :: <*>_N) (b :: <*>_N).
+                 <EitherIO.EitherIO e a>_R
+                 ->_R <EitherIO.EitherIO e b>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Either.Either e b>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                      <e>_R <b>_R)) -}
+846799ff2be220fe9a9dd1e317274646
+  $sel:runEitherIO:EitherIO ::
+    EitherIO.EitherIO e a -> GHC.Types.IO (Data.Either.Either e a)
+  RecSel Left EitherIO.EitherIO
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                EitherIO.$sel:runEitherIO:EitherIO1
+                  `cast`
+                (forall (e :: <*>_N) (a :: <*>_N).
+                 <EitherIO.EitherIO e a>_R
+                 ->_R EitherIO.N:EitherIO[0] <e>_R <a>_R) -}
+846799ff2be220fe9a9dd1e317274646
+  $sel:runEitherIO:EitherIO1 ::
+    EitherIO.EitherIO e a -> EitherIO.EitherIO e a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ e @ a (ds :: EitherIO.EitherIO e a) -> ds) -}
+4a5ced828896aca197eea021b10ea066
+  $tc'EitherIO :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15151111928370904698##
+                   12935388083095783019##
+                   EitherIO.$trModule
+                   EitherIO.$tc'EitherIO2
+                   2#
+                   EitherIO.$tc'EitherIO1) -}
+90e7fea564d99c3fa2440452b7661153
+  $tc'EitherIO1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+277e19bd6d647e2fb40caa838b373165
+  $tc'EitherIO2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS EitherIO.$tc'EitherIO3) -}
+e700d8084b93c774a7383ce836fb8e0b
+  $tc'EitherIO3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'EitherIO"#) -}
+1637bece23e3095e6f5da4befd36a3a5
+  $tcEitherIO :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11232866625826424643##
+                   10131985254339623208##
+                   EitherIO.$trModule
+                   EitherIO.$trModule1
+                   0#
+                   GHC.Types.krep$*->*->*) -}
+982697ff74db2103985ff3c062b5111b
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   EitherIO.$trModule3
+                   EitherIO.$trModule1) -}
+08a7fa34afa6e51969a08999c73d6af2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS EitherIO.$trModule2) -}
+ef677841b9b722fd133a0cbd2323b8d1
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("EitherIO"#) -}
+4639c75fb7371130865ff7b48c21531a
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS EitherIO.$trModule4) -}
+994b4d6a94950e718789660e5ee7285a
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf"#) -}
+846799ff2be220fe9a9dd1e317274646
+  newtype EitherIO e a
+    = EitherIO {runEitherIO :: GHC.Types.IO (Data.Either.Either e a)}
+91a71f58a15041128b871a7a2fe6266c
+  liftEither :: Data.Either.Either e a -> EitherIO.EitherIO e a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                EitherIO.liftEither1
+                  `cast`
+                (forall (e :: <*>_N) (a :: <*>_N).
+                 <Data.Either.Either e a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Either.Either e a>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                      <e>_R <a>_R)) -}
+29aa5bdbc1c54e9f8ca1f6f0d5992e8d
+  liftEither1 ::
+    Data.Either.Either e a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e a #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ e
+                   @ a
+                   (x :: Data.Either.Either e a)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# s, x #)) -}
+8ef21578e6b574a26909b19a7fd23cf4
+  liftIO :: GHC.Types.IO a -> EitherIO.EitherIO e a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <C(S(SL)),1*C1(U(U,U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                EitherIO.liftIO1
+                  `cast`
+                (forall (a :: <*>_N) (e :: <*>_N).
+                 <GHC.Types.IO a>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.Either.Either e a>_R) ; Sym (EitherIO.N:EitherIO[0]
+                                                                      <e>_R <a>_R)) -}
+94c2a2c1291ee7c3fe317d755dc71e18
+  liftIO1 ::
+    GHC.Types.IO a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Either.Either e a #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <C(S(SL)),1*C1(U(U,U))><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ e
+                   (x :: GHC.Types.IO a)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case x `cast` (GHC.Types.N:IO[0] <a>_R) s of ds { (#,#) ipv ipv1 ->
+                 (# ipv, Data.Either.Right @ e @ a ipv1 #) }) -}
+instance GHC.Base.Applicative [EitherIO.EitherIO]
+  = EitherIO.$fApplicativeEitherIO
+instance GHC.Base.Functor [EitherIO.EitherIO]
+  = EitherIO.$fFunctorEitherIO
+instance GHC.Base.Monad [EitherIO.EitherIO]
+  = EitherIO.$fMonadEitherIO
+trusted: trustworthy
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

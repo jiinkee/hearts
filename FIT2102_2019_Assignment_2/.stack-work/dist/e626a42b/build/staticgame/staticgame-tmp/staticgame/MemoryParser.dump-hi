@@ -1,0 +1,737 @@
+
+==================== FINAL INTERFACE ====================
+2019-10-10 05:49:59.8503834 UTC
+
+interface main:MemoryParser 8064
+  interface hash: 22bea8051241f8327c744b3b8f233c0a
+  ABI hash: 0798abcb6f9abd458a8bc16194a9f7a8
+  export-list hash: 5073857b64741d4a1b5870eb7c2a41d2
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 87f038a240ba1c5a2762df5516ceda23
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MemoryParser.getBrokenHeart
+  MemoryParser.getPreviousRound
+  MemoryParser.getUsedCards
+  MemoryParser.getUsedClubs
+  MemoryParser.getUsedDiamonds
+  MemoryParser.getUsedHearts
+  MemoryParser.getUsedSpades
+  MemoryParser.updateRunOutSuit
+  MemoryParser.updateUsedCards
+  MemoryParser.whoRunOut
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 hearts-0.1.0.0 integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Data.Foldable 6673f41a7644ecd4dda455d741d47ef8
+import  -/  base-4.12.0.0:Data.List ccb3c44b4e7df281b8508bfc1f389d8d
+import  -/  base-4.12.0.0:Data.Maybe 385d0eb722c0cb2347caf44c1967afe7
+import  -/  base-4.12.0.0:Data.OldList cd51cf46346202f55e4ecde7f0f7b58e
+import  -/  base-4.12.0.0:Data.Tuple ddbd97abaf9b62e84e82a5bae338d270
+import  -/  base-4.12.0.0:GHC.Base 954f4c258d193fab7048a63bfeb56dcf
+import  -/  base-4.12.0.0:GHC.List 63f1dc438c14c2ecfce50219fbb7ff35
+import  -/  base-4.12.0.0:GHC.Num 009f4fca9200daff9e3ffbe2d7676a2f
+import  -/  base-4.12.0.0:Prelude aea9afd24db8aed3563d7d850ea453c0
+import  -/  ghc-prim-0.5.3:GHC.Classes 6002495dc43e58d28c87e5e5e058752a
+import  -/  hearts-0.1.0.0:Cards d697d07d040dcb0fea10f2214ac7155e
+import  -/  hearts-0.1.0.0:Hearts.Types a3e1c55fd9fb4edfd15f0d68a5a3797b
+6d62eef038877aca8c1a092664aeeda6
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MemoryParser.$trModule3
+                   MemoryParser.$trModule1) -}
+2026faecbb23dc55f75ae394cb404b20
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS MemoryParser.$trModule2) -}
+48265ffbe393f8267828c605c2607f19
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MemoryParser"#) -}
+77e091644b8cfc9b5db4858e151624ad
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS MemoryParser.$trModule4) -}
+0a48c46b6e209029258bf5d6325c55e9
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+4e9ea17ec3a463b0179e013217950858
+  $winsertAt :: a -> GHC.Prim.Int# -> [a] -> [a]
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><S,1*U><L,U>,
+     Inline: [2] -}
+4f71679c89c4ce25f9c6a6ea5634c9b7
+  $wlvl :: Cards.Suit -> Cards.Rank -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: Cards.Suit) (ww1 :: Cards.Rank) ->
+                 let {
+                   n :: [GHC.Types.Char]
+                   = case ww1 of wild {
+                       Cards.Two -> MemoryParser.updateUsedCards26
+                       Cards.Three -> MemoryParser.updateUsedCards24
+                       Cards.Four -> MemoryParser.updateUsedCards22
+                       Cards.Five -> MemoryParser.updateUsedCards20
+                       Cards.Six -> MemoryParser.updateUsedCards18
+                       Cards.Seven -> MemoryParser.updateUsedCards16
+                       Cards.Eight -> MemoryParser.updateUsedCards14
+                       Cards.Nine -> MemoryParser.updateUsedCards12
+                       Cards.Ten -> MemoryParser.updateUsedCards10
+                       Cards.Jack -> MemoryParser.updateUsedCards8
+                       Cards.Queen -> MemoryParser.updateUsedCards6
+                       Cards.King -> MemoryParser.updateUsedCards4
+                       Cards.Ace -> MemoryParser.updateUsedCards2 }
+                 } in
+                 case ww of wild {
+                   Cards.Spade
+                   -> GHC.Base.++ @ GHC.Types.Char MemoryParser.updateRunOutSuit11 n
+                   Cards.Club
+                   -> GHC.Base.++ @ GHC.Types.Char MemoryParser.updateRunOutSuit9 n
+                   Cards.Diamond
+                   -> GHC.Base.++ @ GHC.Types.Char MemoryParser.updateRunOutSuit7 n
+                   Cards.Heart
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        MemoryParser.updateRunOutSuit5
+                        n }) -}
+d73a3b350f75519aa1fb7027f39b81d7
+  getBrokenHeart ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 case memory of wild {
+                   GHC.Maybe.Nothing
+                   -> case Data.Maybe.fromJust1 ret_ty GHC.Base.String of {}
+                   GHC.Maybe.Just x
+                   -> case x of wild1 { (,) ds1 y ->
+                      case Data.OldList.lines y of wild2 {
+                        [] -> GHC.List.badHead @ GHC.Base.String : x1 ds2 -> x1 } } }) -}
+66dccd33afe0e1e4cc536476c7523f43
+  getCardStringOnly ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 case memory of wild {
+                   GHC.Maybe.Nothing
+                   -> case Data.Maybe.fromJust1 ret_ty GHC.Base.String of {}
+                   GHC.Maybe.Just x
+                   -> case x of wild1 { (,) ds1 y ->
+                      case Data.OldList.lines y of wild2 {
+                        [] -> case GHC.List.scanl2 ret_ty GHC.Base.String of {}
+                        : ds2 xs
+                        -> case GHC.List.$wlenAcc @ [GHC.Types.Char] xs 0# of ww2 {
+                             DEFAULT -> GHC.Types.[] @ GHC.Types.Char
+                             5# -> GHC.List.head @ GHC.Base.String xs } } } }) -}
+344de3d8c8297f9f70d8573f193b1864
+  getPreviousRound ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [(Cards.Card, Hearts.Types.PlayerId)]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 case memory of wild {
+                   GHC.Maybe.Nothing
+                   -> case Data.Maybe.fromJust1
+                      ret_ty [(Cards.Card, Hearts.Types.PlayerId)]
+                      of {}
+                   GHC.Maybe.Just x -> case x of wild1 { (,) x1 ds1 -> x1 } }) -}
+2b9470f9b8831a23a72b45286961dc6d
+  getRunOutSuitOnly ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [GHC.Base.String]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 case memory of wild {
+                   GHC.Maybe.Nothing
+                   -> case Data.Maybe.fromJust1 ret_ty [GHC.Base.String] of {}
+                   GHC.Maybe.Just x
+                   -> case x of wild1 { (,) ds1 y ->
+                      case Data.OldList.lines y of wild2 {
+                        [] -> case GHC.List.scanl2 ret_ty [GHC.Base.String] of {}
+                        : ds2 xs
+                        -> case GHC.List.$wlenAcc @ [GHC.Types.Char] xs 0# of ww2 {
+                             DEFAULT -> xs 5# -> GHC.List.tail @ GHC.Base.String xs } } } }) -}
+911c1790fee78b76e6a5fe74cc9a834d
+  getUsedCards ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [Cards.Card]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 let {
+                   n :: [Cards.Card]
+                   = case memory of wild {
+                       GHC.Maybe.Nothing
+                       -> case Data.Maybe.fromJust1 ret_ty [Cards.Card] of {}
+                       GHC.Maybe.Just x
+                       -> case x of wild1 { (,) x1 ds1 ->
+                          GHC.Base.map
+                            @ (Cards.Card, Hearts.Types.PlayerId)
+                            @ Cards.Card
+                            (Data.Tuple.fst @ Cards.Card @ Hearts.Types.PlayerId)
+                            x1 } }
+                 } in
+                 letrec {
+                   go :: [GHC.Types.Char] -> [Cards.Card]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (s :: [GHC.Types.Char]) ->
+                     case GHC.List.dropWhile
+                            @ GHC.Types.Char
+                            GHC.Unicode.isSpace
+                            s of wild {
+                       [] -> n
+                       : ipv ipv1
+                       -> let {
+                            ds :: ([GHC.Types.Char], [GHC.Types.Char])
+                            = case GHC.List.$wbreak
+                                     @ GHC.Types.Char
+                                     GHC.Unicode.isSpace
+                                     wild of ww { (#,#) ww1 ww2 ->
+                              (ww1, ww2) }
+                          } in
+                          GHC.Types.:
+                            @ Cards.Card
+                            (Cards.Card
+                               (case ds of wild1 { (,) w s'' ->
+                                case w of wild2 {
+                                  [] -> case GHC.List.badHead ret_ty Cards.Suit of {}
+                                  : x ds1
+                                  -> case x of wild3 { GHC.Types.C# ds2 ->
+                                     case ds2 of ds3 {
+                                       DEFAULT -> Cards.Diamond
+                                       'C'# -> Cards.Club
+                                       'H'# -> Cards.Heart
+                                       'S'# -> Cards.Spade } } } })
+                               (case ds of wild1 { (,) w s'' ->
+                                MemoryParser.getUsedCards_go
+                                  w
+                                  (GHC.List.lastError @ GHC.Types.Char) }))
+                            (case ds of wild1 { (,) w s'' -> go s'' }) }
+                 } in
+                 go (MemoryParser.getCardStringOnly memory)) -}
+9a0145f5d6aaea04c80eb53b2fd1c70b
+  getUsedCards_go :: [GHC.Types.Char] -> GHC.Types.Char -> Cards.Rank
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(1*U)> -}
+edc74ed1fe37b06ca20259702ae47511
+  getUsedClubs ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [Cards.Card]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 GHC.Base.build
+                   @ Cards.Card
+                   (\ @ b (c :: Cards.Card -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ Cards.Card
+                      @ b
+                      (GHC.List.filterFB @ Cards.Card @ b c MemoryParser.getUsedClubs1)
+                      n
+                      (MemoryParser.getUsedCards memory))) -}
+1a653621a8477becac4df2d1d306a829
+  getUsedClubs1 :: Cards.Card -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (card :: Cards.Card) ->
+                 case card of wild { Cards.Card s ds ->
+                 case s of wild1 {
+                   DEFAULT -> GHC.Types.False Cards.Club -> GHC.Types.True } }) -}
+9c2a5444ddf5a0e34a4c12e65e7ead88
+  getUsedDiamonds ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [Cards.Card]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 GHC.Base.build
+                   @ Cards.Card
+                   (\ @ b (c :: Cards.Card -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ Cards.Card
+                      @ b
+                      (GHC.List.filterFB
+                         @ Cards.Card
+                         @ b
+                         c
+                         MemoryParser.getUsedDiamonds1)
+                      n
+                      (MemoryParser.getUsedCards memory))) -}
+f88e8c43e79f2b0a6cc2b24ef3d3155a
+  getUsedDiamonds1 :: Cards.Card -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (card :: Cards.Card) ->
+                 case card of wild { Cards.Card s ds ->
+                 case s of wild1 {
+                   DEFAULT -> GHC.Types.False Cards.Diamond -> GHC.Types.True } }) -}
+a9802bc72157f140f2101b267bbde8c1
+  getUsedHearts ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [Cards.Card]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 GHC.Base.build
+                   @ Cards.Card
+                   (\ @ b (c :: Cards.Card -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ Cards.Card
+                      @ b
+                      (GHC.List.filterFB @ Cards.Card @ b c MemoryParser.getUsedHearts1)
+                      n
+                      (MemoryParser.getUsedCards memory))) -}
+856951a2087ba927003e3336f8c252df
+  getUsedHearts1 :: Cards.Card -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (card :: Cards.Card) ->
+                 case card of wild { Cards.Card s ds ->
+                 case s of wild1 {
+                   DEFAULT -> GHC.Types.False Cards.Heart -> GHC.Types.True } }) -}
+029d72f3d2bffbfdedd52c2caedf5f62
+  getUsedSpades ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [Cards.Card]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 GHC.Base.build
+                   @ Cards.Card
+                   (\ @ b (c :: Cards.Card -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ Cards.Card
+                      @ b
+                      (GHC.List.filterFB @ Cards.Card @ b c MemoryParser.getUsedSpades1)
+                      n
+                      (MemoryParser.getUsedCards memory))) -}
+78ff7f42f81cd6e14e9ee9da481d256b
+  getUsedSpades1 :: Cards.Card -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (card :: Cards.Card) ->
+                 case card of wild { Cards.Card s ds ->
+                 case s of wild1 {
+                   Cards.Spade -> GHC.Types.True
+                   Cards.Club -> GHC.Types.False
+                   Cards.Diamond -> GHC.Types.False
+                   Cards.Heart -> GHC.Types.False } }) -}
+ae6d25cec7b34dd7cb25a4ef72d32d01
+  uniqueRunOutSuitPlayer ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> [GHC.Base.String]
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 let {
+                   lvl :: Cards.Suit
+                   = case memory of wild {
+                       GHC.Maybe.Nothing
+                       -> case Data.Maybe.fromJust1 ret_ty Cards.Suit of {}
+                       GHC.Maybe.Just x
+                       -> case x of wild1 { (,) x1 ds1 ->
+                          MemoryParser.updateRunOutSuit_go
+                            x1
+                            (GHC.List.lastError @ (Cards.Card, Hearts.Types.PlayerId)) } }
+                 } in
+                 Data.OldList.nubBy
+                   @ GHC.Base.String
+                   GHC.Base.eqString
+                   (GHC.Types.:
+                      @ [GHC.Types.Char]
+                      (case lvl of wild {
+                         Cards.Spade -> MemoryParser.updateRunOutSuit11
+                         Cards.Club -> MemoryParser.updateRunOutSuit9
+                         Cards.Diamond -> MemoryParser.updateRunOutSuit7
+                         Cards.Heart -> MemoryParser.updateRunOutSuit5 })
+                      (case memory of wild {
+                         GHC.Maybe.Nothing
+                         -> case Data.Maybe.fromJust1 ret_ty [[GHC.Types.Char]] of {}
+                         GHC.Maybe.Just x
+                         -> case x of wild1 { (,) x1 ds1 ->
+                            let {
+                              z :: [[GHC.Types.Char]]
+                              = let {
+                                  exit :: (Cards.Card, Hearts.Types.PlayerId)
+                                          -> [Hearts.Types.PlayerId]
+                                    <join 1> {- Arity: 1,
+                                                Strictness: <S(S(SL)L),1*U(1*U(1*U,A),A)> -}
+                                  = \ (eta :: (Cards.Card, Hearts.Types.PlayerId))[OneShot] ->
+                                    case eta of wild2 { (,) x2 ds2 ->
+                                    case x2 of ww { Cards.Card ww1 ww2 ->
+                                    MemoryParser.whoRunOut wild ww1 } }
+                                } in
+                                letrec {
+                                  go :: [(Cards.Card, Hearts.Types.PlayerId)]
+                                        -> (Cards.Card, Hearts.Types.PlayerId)
+                                        -> [Hearts.Types.PlayerId]
+                                    <join 2> {- Arity: 2,
+                                                Strictness: <S,1*U><L,1*U(1*U(1*U,A),A)> -}
+                                  = \ (ds :: [(Cards.Card, Hearts.Types.PlayerId)])
+                                      (eta :: (Cards.Card, Hearts.Types.PlayerId)) ->
+                                    case ds of wild2 { [] -> exit eta : y ys -> go ys y }
+                                } in
+                                go x1 (GHC.List.lastError @ (Cards.Card, Hearts.Types.PlayerId))
+                            } in
+                            letrec {
+                              go :: [(Cards.Card, Hearts.Types.PlayerId)] -> [[GHC.Types.Char]]
+                                {- Arity: 1, Strictness: <S,1*U> -}
+                              = \ (ds :: [(Cards.Card, Hearts.Types.PlayerId)]) ->
+                                case ds of wild2 {
+                                  [] -> z
+                                  : y ys
+                                  -> case y of wild3 { (,) x2 ds2 ->
+                                     case x2 of wild4 { Cards.Card s ds3 ->
+                                     case s of wild5 {
+                                       Cards.Spade
+                                       -> case lvl of wild6 {
+                                            DEFAULT -> GHC.Types.: @ [GHC.Types.Char] ds2 (go ys)
+                                            Cards.Spade -> go ys }
+                                       Cards.Club
+                                       -> case lvl of wild6 {
+                                            DEFAULT -> GHC.Types.: @ [GHC.Types.Char] ds2 (go ys)
+                                            Cards.Club -> go ys }
+                                       Cards.Diamond
+                                       -> case lvl of wild6 {
+                                            DEFAULT -> GHC.Types.: @ [GHC.Types.Char] ds2 (go ys)
+                                            Cards.Diamond -> go ys }
+                                       Cards.Heart
+                                       -> case lvl of wild6 {
+                                            DEFAULT -> GHC.Types.: @ [GHC.Types.Char] ds2 (go ys)
+                                            Cards.Heart -> go ys } } } } }
+                            } in
+                            go x1 } }))) -}
+7363769ca01e9322f25869cca437a471
+  updateRunOutSuit ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 case MemoryParser.uniqueRunOutSuitPlayer memory of wild {
+                   [] -> case GHC.List.badHead ret_ty [GHC.Types.Char] of {}
+                   : x ds1
+                   -> let {
+                        $j :: GHC.Prim.Int# -> [GHC.Types.Char]
+                          <join 1> {- Arity: 1, Strictness: <S,U> -}
+                        = \ (ww :: GHC.Prim.Int#)[OneShot] ->
+                          case MemoryParser.$winsertAt
+                                 @ GHC.Base.String
+                                 (case MemoryParser.uniqueRunOutSuitPlayer memory of wild1 {
+                                    [] -> GHC.Types.[] @ GHC.Types.Char
+                                    : x1 xs1
+                                    -> Data.OldList.intercalate1
+                                         @ GHC.Types.Char
+                                         (GHC.Types.:
+                                            @ [GHC.Types.Char]
+                                            x1
+                                            (Data.OldList.prependToAll
+                                               @ [GHC.Types.Char]
+                                               MemoryParser.updateRunOutSuit3
+                                               xs1)) })
+                                 ww
+                                 (case GHC.Prim.<=# ww 0# of lwild {
+                                    DEFAULT
+                                    -> case GHC.List.$wsplitAt'
+                                              @ GHC.Base.String
+                                              (GHC.Types.I# ww)
+                                              (MemoryParser.getRunOutSuitOnly
+                                                 memory) of ww1 { (#,#) ww2 ww3 ->
+                                       GHC.Base.++
+                                         @ [GHC.Types.Char]
+                                         ww2
+                                         (case ww3 of wild1 {
+                                            [] -> GHC.List.scanl2 @ GHC.Base.String
+                                            : ds2 xs -> xs }) }
+                                    1#
+                                    -> GHC.Base.++
+                                         @ [GHC.Types.Char]
+                                         (GHC.Types.[] @ GHC.Base.String)
+                                         (case MemoryParser.getRunOutSuitOnly memory of wild1 {
+                                            [] -> GHC.List.scanl2 @ GHC.Base.String
+                                            : ds2 xs -> xs }) }) of wild1 {
+                            [] -> GHC.Types.[] @ GHC.Types.Char
+                            : x1 xs1
+                            -> Data.OldList.intercalate1
+                                 @ GHC.Types.Char
+                                 (GHC.Types.:
+                                    @ [GHC.Types.Char]
+                                    x1
+                                    (Data.OldList.prependToAll
+                                       @ [GHC.Types.Char]
+                                       MemoryParser.updateRunOutSuit1
+                                       xs1)) }
+                      } in
+                      case x of wild1 {
+                        [] -> $j 3#
+                        : ds ds2
+                        -> case ds of wild2 { GHC.Types.C# ds3 ->
+                           case ds3 of ds4 {
+                             DEFAULT -> $j 3#
+                             'C'# -> case ds2 of wild3 { [] -> $j 1# : ipv ipv1 -> $j 3# }
+                             'D'# -> case ds2 of wild3 { [] -> $j 2# : ipv ipv1 -> $j 3# }
+                             'S'#
+                             -> case ds2 of wild3 {
+                                  [] -> $j 0# : ipv ipv1 -> $j 3# } } } } }) -}
+b29946e105e1be34ce8974917d4bc002
+  updateRunOutSuit1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateRunOutSuit2) -}
+89a4b50528d86693a31b2f35988226dc
+  updateRunOutSuit10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("C"#) -}
+bc596ef527c274d207f622f5239d120c
+  updateRunOutSuit11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateRunOutSuit12) -}
+c95affa5c49a08895b3e2310750aec9e
+  updateRunOutSuit12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("S"#) -}
+5f5e27f816159a5a251dd78f46eb46d9
+  updateRunOutSuit2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\n"#) -}
+a72ff7beb1b84f938c4a9f05ab5092fe
+  updateRunOutSuit3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateRunOutSuit4) -}
+0c6f9161ec2a9f2e5a5e10aca9f09789
+  updateRunOutSuit4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" "#) -}
+6da334ddd768263aa776bbaefacfb76a
+  updateRunOutSuit5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateRunOutSuit6) -}
+60797aaa9ca9c544bea7dbff6ce82198
+  updateRunOutSuit6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("H"#) -}
+a39aae73749042a0d7d93a611b4528f8
+  updateRunOutSuit7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateRunOutSuit8) -}
+58ace0446ca529a8a034fd9b9e190d7e
+  updateRunOutSuit8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("D"#) -}
+fb69679e2de36c5ad3c01a7de26a5d29
+  updateRunOutSuit9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateRunOutSuit10) -}
+bc63137f3d5e2e966fd6876fc21d642c
+  updateRunOutSuit_go ::
+    [(Cards.Card, Hearts.Types.PlayerId)]
+    -> (Cards.Card, Hearts.Types.PlayerId) -> Cards.Suit
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U(1*U(1*U,A),A)> -}
+923c337e070c492546fbd12909792ead
+  updateUsedCards ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)) ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (MemoryParser.getCardStringOnly memory)
+                   (GHC.CString.unpackAppendCString#
+                      MemoryParser.updateRunOutSuit4
+                      (case memory of wild {
+                         GHC.Maybe.Nothing
+                         -> case Data.Maybe.fromJust1 ret_ty [GHC.Types.Char] of {}
+                         GHC.Maybe.Just x
+                         -> case x of wild1 { (,) x1 ds1 ->
+                            case GHC.Base.map
+                                   @ (Cards.Card, Hearts.Types.PlayerId)
+                                   @ [GHC.Types.Char]
+                                   MemoryParser.updateUsedCards1
+                                   x1 of wild2 {
+                              [] -> GHC.Types.[] @ GHC.Types.Char
+                              : x2 xs1
+                              -> Data.OldList.intercalate1
+                                   @ GHC.Types.Char
+                                   (GHC.Types.:
+                                      @ [GHC.Types.Char]
+                                      x2
+                                      (Data.OldList.prependToAll
+                                         @ [GHC.Types.Char]
+                                         MemoryParser.updateRunOutSuit3
+                                         xs1)) } } }))) -}
+4201f5a4714672f2641101c6529d99c1
+  updateUsedCards1 ::
+    (Cards.Card, Hearts.Types.PlayerId) -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S(S(SL)L),1*U(1*U(1*U,1*U),A)>,
+     Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: (Cards.Card, Hearts.Types.PlayerId)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { Cards.Card ww4 ww5 ->
+                 MemoryParser.$wlvl ww4 ww5 } }) -}
+49fd7ae5c4e0121588818fc64cc39eef
+  updateUsedCards10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards11) -}
+25d2096f222f184ea926247d6b1a7c14
+  updateUsedCards11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("0"#) -}
+ed248ff1c4896aaae64da489ff017fb1
+  updateUsedCards12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards13) -}
+8aeb668061efff7e2a7a372baba76348
+  updateUsedCards13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("9"#) -}
+132c87d2036e4aa9b93381abddd402ea
+  updateUsedCards14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards15) -}
+0120c47c5e522a8df654dc7ae5ed2a7b
+  updateUsedCards15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("8"#) -}
+e9e74c814d30730255d402c6a593bba1
+  updateUsedCards16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards17) -}
+dd547add66d4049dc28426d1426f20a0
+  updateUsedCards17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("7"#) -}
+9349c0c82b6b76bf9f44bffafd057250
+  updateUsedCards18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards19) -}
+289180847b41a92a1c56a426c13a70be
+  updateUsedCards19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("6"#) -}
+f3f92235cb84ac83a3ad3d40597d809f
+  updateUsedCards2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards3) -}
+f24176b8038083e5c366303ec88fc946
+  updateUsedCards20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards21) -}
+596cebb702c04d0b3e4ab88affc24708
+  updateUsedCards21 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("5"#) -}
+03607af234ee56a6be9fbd6dcec857c4
+  updateUsedCards22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards23) -}
+b8fad1b0dfa49eb3fd220251d5e65e59
+  updateUsedCards23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("4"#) -}
+0b5a536cefa3d767a1c6316d391bab79
+  updateUsedCards24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards25) -}
+96675e76a1c5be55f041eeea8c1c9173
+  updateUsedCards25 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("3"#) -}
+eefbcd1a3471f90dc7463c0d136a517d
+  updateUsedCards26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards27) -}
+3862364bc8504c1e5c35c1f97cb6457f
+  updateUsedCards27 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("2"#) -}
+276f5fe77691c278050ce711f59ea412
+  updateUsedCards3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("A"#) -}
+d9de6caea23ef8a9717ca1dfaff530be
+  updateUsedCards4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards5) -}
+94b576d95c9ffe6d2596a51e8b4b0bd8
+  updateUsedCards5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("K"#) -}
+1fdfdcbb851696f4adc2961a0cc678be
+  updateUsedCards6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards7) -}
+83eeeb9460b83f423c45097e52ff80e8
+  updateUsedCards7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Q"#) -}
+c9fe9b21cb18f737a0ca8b51300a16b6
+  updateUsedCards8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   MemoryParser.updateUsedCards9) -}
+e315f650e56680d7e1c57d90b3453d74
+  updateUsedCards9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("J"#) -}
+240ff4721b1b43cecd12a42c64900691
+  whoRunOut ::
+    GHC.Maybe.Maybe
+      ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String)
+    -> Cards.Suit -> [Hearts.Types.PlayerId]
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (memory :: GHC.Maybe.Maybe
+                                ([(Cards.Card, Hearts.Types.PlayerId)], GHC.Base.String))
+                   (thesuit :: Cards.Suit) ->
+                 case thesuit of wild {
+                   Cards.Spade
+                   -> case GHC.List.$w!!
+                             @ GHC.Base.String
+                             (MemoryParser.getRunOutSuitOnly memory)
+                             0# of wild1 {
+                        [] -> case Data.Maybe.fromJust1 ret_ty [GHC.Base.String] of {}
+                        : x xs -> Data.OldList.words xs }
+                   Cards.Club
+                   -> case GHC.List.$w!!
+                             @ GHC.Base.String
+                             (MemoryParser.getRunOutSuitOnly memory)
+                             1# of wild1 {
+                        [] -> case Data.Maybe.fromJust1 ret_ty [GHC.Base.String] of {}
+                        : x xs -> Data.OldList.words xs }
+                   Cards.Diamond
+                   -> case GHC.List.$w!!
+                             @ GHC.Base.String
+                             (MemoryParser.getRunOutSuitOnly memory)
+                             2# of wild1 {
+                        [] -> case Data.Maybe.fromJust1 ret_ty [GHC.Base.String] of {}
+                        : x xs -> Data.OldList.words xs }
+                   Cards.Heart
+                   -> case GHC.List.$w!!
+                             @ GHC.Base.String
+                             (MemoryParser.getRunOutSuitOnly memory)
+                             3# of wild1 {
+                        [] -> case Data.Maybe.fromJust1 ret_ty [GHC.Base.String] of {}
+                        : x xs -> Data.OldList.words xs } }) -}
+trusted: trustworthy
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

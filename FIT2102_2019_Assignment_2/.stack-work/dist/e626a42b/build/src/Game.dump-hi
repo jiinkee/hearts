@@ -1,0 +1,551 @@
+
+==================== FINAL INTERFACE ====================
+2019-10-04 09:13:42.9635838 UTC
+
+interface hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf:Game 8064
+  interface hash: e664582a4a8d1a51ca6df8d31634b2e9
+  ABI hash: aa9fcdbfd23e04e85048d8a66aa183d3
+  export-list hash: 68db46bd96ed6610a8de8d4eebf39a73
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8042b2e00b4bf5445e871ad940a72bd8
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Game.computeEloChanges
+  Game.initElo
+  Game.newPlayer
+  Game.oldPlayer
+  Game.placesFromGameScores
+  Game.sameField
+  Game.updatePlayer
+  Game.Place{Game.Place eloPre place playerId}
+module dependencies: Cards EitherIO Hearts.Types
+package dependencies: Win32-2.6.1.0 array-0.5.3.0 base-4.12.0.0
+                      deepseq-1.4.4.0 ghc-prim-0.5.3 integer-gmp-1.0.2.0 random-1.1
+                      time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Control.Monad be24c6211d7cb61f18d2854428d9a69e
+import  -/  base-4.12.0.0:Data.Foldable 6673f41a7644ecd4dda455d741d47ef8
+import  -/  base-4.12.0.0:Data.Functor 7be8e53dff1d6c612350c8ff6725f331
+import  -/  base-4.12.0.0:Data.List ccb3c44b4e7df281b8508bfc1f389d8d
+import  -/  base-4.12.0.0:Data.Maybe 385d0eb722c0cb2347caf44c1967afe7
+import  -/  base-4.12.0.0:Data.Monoid a677830dd90d0d435fffb3f3c5b27ddf
+import  -/  base-4.12.0.0:Data.OldList cd51cf46346202f55e4ecde7f0f7b58e
+import  -/  base-4.12.0.0:GHC.Base 954f4c258d193fab7048a63bfeb56dcf
+import  -/  base-4.12.0.0:GHC.Enum b48c8c8d2681aecfb61368272d07740d
+import  -/  base-4.12.0.0:GHC.Float 4a83e9fdfd53372b0b325fdc77c6f777
+import  -/  base-4.12.0.0:GHC.List 63f1dc438c14c2ecfce50219fbb7ff35
+import  -/  base-4.12.0.0:GHC.Num 009f4fca9200daff9e3ffbe2d7676a2f
+import  -/  base-4.12.0.0:GHC.Real 2becc15d35863665b039224a7445f8b0
+import  -/  base-4.12.0.0:GHC.Show 48dce8b8129312101170e57c24f3ecbd
+import  -/  base-4.12.0.0:Prelude aea9afd24db8aed3563d7d850ea453c0
+import  -/  base-4.12.0.0:System.Timeout 3fb7b4d545fb13a415ca851d51861e35
+import  -/  ghc-prim-0.5.3:GHC.Classes 6002495dc43e58d28c87e5e5e058752a
+import  -/  EitherIO 98810dc896adc4cc136dbb3b59836b29
+  exports: eb310b7d1d6d8e21c41939b03f986d64
+import  -/  Hearts.Types a3e1c55fd9fb4edfd15f0d68a5a3797b
+  exports: e63188d47c1b60e5775afdff00704e87
+  $sel:elo:Player e2943f98cb190d157501cefcaadd0ae0
+  $sel:finalScore:GameScore 6110abbb94abd19b1380ee3312650cec
+  $sel:gamesPlayed:Player e2943f98cb190d157501cefcaadd0ae0
+  $sel:playerId:Player e2943f98cb190d157501cefcaadd0ae0
+  BidFunc 1ee66a5afbf5ab94fda9254f2b076e9a
+  GameScore 2afd76bd63f9df5a568bc2df3c2c90f2
+  GameScore 6110abbb94abd19b1380ee3312650cec
+  PlayFunc 7e2d2c61c9bb7d0e98eed1507952d7c7
+  Player f29520b7638206ecedb9403ebc176da9
+  Player e2943f98cb190d157501cefcaadd0ae0
+  PlayerId 3f460c200f553f1b990ca9337c7b043c
+import  -/  random-1.1:System.Random 2df3d2176d852a42a0e8aa97126009b4
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $fShowPlace :: GHC.Show.Show Game.Place
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Game.Place
+                  Game.$fShowPlace_$cshowsPrec
+                  Game.$fShowPlace_$cshow
+                  Game.$fShowPlace_$cshowList -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $fShowPlace1 :: Game.Place -> GHC.Show.ShowS
+  {- Arity: 1, Strictness: <S,1*U(U,U(U),1*U(U))>,
+     Unfolding: (\ (w :: Game.Place) ->
+                 case w of ww { Game.Place ww1 ww2 ww3 ->
+                 Game.$w$cshowsPrec 0# ww1 ww2 ww3 }) -}
+5c015556f52ce164603b18c419cfbf76
+  $fShowPlace2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+ffe971e34a03027c2478f338736be810
+  $fShowPlace3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("eloPre = "#) -}
+0c0c5b7be854301d87f210c54978331b
+  $fShowPlace4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("place = "#) -}
+ce6b36f277d0448953c2182ff1b12bce
+  $fShowPlace5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("playerId = "#) -}
+1cdb544ba835b61d1fbc2fcf1060d30f
+  $fShowPlace6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Place {"#) -}
+e661a4f27a296241e877c33138acd9b2
+  $fShowPlace7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $fShowPlace_$cshow :: Game.Place -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U,U(U),1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Game.Place) ->
+                 Game.$fShowPlace_$cshowsPrec
+                   Game.$fShowPlace7
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $fShowPlace_$cshowList :: [Game.Place] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Game.Place]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Game.Place Game.$fShowPlace1 ls s) -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $fShowPlace_$cshowsPrec ::
+    GHC.Types.Int -> Game.Place -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,1*U(U,U(U),1*U(U))>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Game.Place) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Game.Place ww3 ww4 ww5 ->
+                 Game.$w$cshowsPrec ww1 ww3 ww4 ww5 } }) -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $sel:eloPre:Place :: Game.Place -> GHC.Types.Float
+  RecSel Left Game.Place
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Game.Place) ->
+                 case ds of wild { Game.Place ds1 ds2 ds3 -> ds3 }) -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $sel:place:Place :: Game.Place -> GHC.Types.Int
+  RecSel Left Game.Place
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Game.Place) ->
+                 case ds of wild { Game.Place ds1 ds2 ds3 -> ds2 }) -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  $sel:playerId:Place :: Game.Place -> Hearts.Types.PlayerId
+  RecSel Left Game.Place
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Game.Place) ->
+                 case ds of wild { Game.Place ds1 ds2 ds3 -> ds1 }) -}
+02bd02c017907e43c8975e53c29341bf
+  $tc'Place :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14651035944425633629##
+                   11094435312365411163##
+                   Game.$trModule
+                   Game.$tc'Place2
+                   0#
+                   Game.$tc'Place1) -}
+17cfdbf841ce4e4cdf308fc29075511b
+  $tc'Place1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+87867cd601fdec0d0bf978eea55f803a
+  $tc'Place2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Game.$tc'Place3) -}
+877e8c0c7069022c6760a9b8aeb166f7
+  $tc'Place3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Place"#) -}
+16855e940b07b43ec0c04e8e6727099b
+  $tcPlace :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13278333261674720180##
+                   16818632544499757839##
+                   Game.$trModule
+                   Game.$tcPlace1
+                   0#
+                   GHC.Types.krep$*) -}
+a9f2e0cba5645cf65c8feb7ce2fe6462
+  $tcPlace1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Game.$tcPlace2) -}
+42d93bfecd0a09b22a3e468862b9ff10
+  $tcPlace2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Place"#) -}
+d1ce3e3d061eb7954ac15a51975ccdd0
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Game.$trModule3 Game.$trModule1) -}
+8b1dd35f9cd5d26bc1c64bfd63aac69b
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Game.$trModule2) -}
+12e878a14ac3c930ef507f897821f714
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Game"#) -}
+39a14502135961ad06248ae9250274f9
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Game.$trModule4) -}
+e04653bddcc44f73cc1c32ee12b5a40e
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf"#) -}
+0b9b20470214511bfcfc328176e379f5
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Hearts.Types.PlayerId
+    -> GHC.Types.Int
+    -> GHC.Types.Float
+    -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <S,U><L,U><L,U(U)><L,1*U(U)>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Hearts.Types.PlayerId)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Float) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = case ww3 of ww4 { GHC.Types.F# ww5 ->
+                     GHC.Float.$w$sshowSignedFloat1
+                       GHC.Float.$fShowFloat2
+                       Game.$fShowPlace7
+                       ww5 }
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.CString.unpackAppendCString#
+                       Game.$fShowPlace6
+                       (GHC.CString.unpackAppendCString#
+                          Game.$fShowPlace5
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)3
+                             (GHC.Show.showLitString
+                                ww1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.$fShow(,)3
+                                   (GHC.Base.++
+                                      @ GHC.Types.Char
+                                      GHC.Show.showCommaSpace1
+                                      (GHC.CString.unpackAppendCString#
+                                         Game.$fShowPlace4
+                                         (case ww2 of ww4 { GHC.Types.I# ww5 ->
+                                          case GHC.Show.$wshowSignedInt
+                                                 0#
+                                                 ww5
+                                                 (GHC.Base.++
+                                                    @ GHC.Types.Char
+                                                    GHC.Show.showCommaSpace1
+                                                    (GHC.CString.unpackAppendCString#
+                                                       Game.$fShowPlace3
+                                                       (f (GHC.CString.unpackAppendCString#
+                                                             Game.$fShowPlace2
+                                                             x)))) of ww6 { (#,#) ww7 ww8 ->
+                                          GHC.Types.: @ GHC.Types.Char ww7 ww8 } })))))))
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT -> p
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x)) }) -}
+b69d2c8fed652ec5524db05bd3c4fb6d
+  data Place
+    = Place {playerId :: Hearts.Types.PlayerId,
+             place :: GHC.Types.Int,
+             eloPre :: GHC.Types.Float}
+59312d9e41d9f1e3fb4d12383180483f
+  computeEloChanges :: [Game.Place] -> [GHC.Types.Float]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: (\ (places :: [Game.Place]) ->
+                 let {
+                   k :: GHC.Types.Float
+                   = case GHC.List.$wlenAcc @ Game.Place places 0# of ww2 { DEFAULT ->
+                     case GHC.Prim.divideFloat#
+                            32.0#
+                            (GHC.Prim.minusFloat#
+                               (GHC.Prim.int2Float# ww2)
+                               1.0#) of wild2 { DEFAULT ->
+                     GHC.Types.F# wild2 } }
+                 } in
+                 GHC.Base.map
+                   @ Game.Place
+                   @ GHC.Types.Float
+                   (\ (ds :: Game.Place) ->
+                    case ds of wild { Game.Place ds1 ds2 ds3 ->
+                    letrec {
+                      $wgo :: [Game.Place] -> GHC.Prim.Float# -> GHC.Types.Float
+                        <join 2> {- Arity: 2, Strictness: <S,1*U><S,U>m, Inline: [2] -}
+                      = \ (w :: [Game.Place]) (ww :: GHC.Prim.Float#) ->
+                        case w of wild1 {
+                          [] -> GHC.Types.F# ww
+                          : y ys
+                          -> case y of wild2 { Game.Place ds4 ds5 ds6 ->
+                             case GHC.Classes.$fEqModule_$s$c== ds4 ds1 of wild3 {
+                               GHC.Types.False
+                               -> case k of wild4 { GHC.Types.F# x ->
+                                  case ds2 of wild5 { GHC.Types.I# x1 ->
+                                  case ds5 of wild6 { GHC.Types.I# y1 ->
+                                  case GHC.Prim.<# x1 y1 of lwild {
+                                    DEFAULT
+                                    -> case GHC.Prim.==# x1 y1 of lwild1 {
+                                         DEFAULT
+                                         -> case ds6 of wild7 { GHC.Types.F# x2 ->
+                                            case ds3 of wild8 { GHC.Types.F# y2 ->
+                                            case GHC.Prim.divideFloat#
+                                                   1.0#
+                                                   (GHC.Prim.plusFloat#
+                                                      1.0#
+                                                      (GHC.Prim.powerFloat#
+                                                         10.0#
+                                                         (GHC.Prim.divideFloat#
+                                                            (GHC.Prim.minusFloat# x2 y2)
+                                                            400.0#))) of wild9 { DEFAULT ->
+                                            $wgo
+                                              ys
+                                              (GHC.Prim.plusFloat#
+                                                 ww
+                                                 (GHC.Prim.timesFloat#
+                                                    x
+                                                    (GHC.Prim.minusFloat# 0.0# wild9))) } } }
+                                         1#
+                                         -> case ds6 of wild7 { GHC.Types.F# x2 ->
+                                            case ds3 of wild8 { GHC.Types.F# y2 ->
+                                            case GHC.Prim.divideFloat#
+                                                   1.0#
+                                                   (GHC.Prim.plusFloat#
+                                                      1.0#
+                                                      (GHC.Prim.powerFloat#
+                                                         10.0#
+                                                         (GHC.Prim.divideFloat#
+                                                            (GHC.Prim.minusFloat# x2 y2)
+                                                            400.0#))) of wild9 { DEFAULT ->
+                                            $wgo
+                                              ys
+                                              (GHC.Prim.plusFloat#
+                                                 ww
+                                                 (GHC.Prim.timesFloat#
+                                                    x
+                                                    (GHC.Prim.minusFloat# 0.5# wild9))) } } } }
+                                    1#
+                                    -> case ds6 of wild7 { GHC.Types.F# x2 ->
+                                       case ds3 of wild8 { GHC.Types.F# y2 ->
+                                       case GHC.Prim.divideFloat#
+                                              1.0#
+                                              (GHC.Prim.plusFloat#
+                                                 1.0#
+                                                 (GHC.Prim.powerFloat#
+                                                    10.0#
+                                                    (GHC.Prim.divideFloat#
+                                                       (GHC.Prim.minusFloat# x2 y2)
+                                                       400.0#))) of wild9 { DEFAULT ->
+                                       $wgo
+                                         ys
+                                         (GHC.Prim.plusFloat#
+                                            ww
+                                            (GHC.Prim.timesFloat#
+                                               x
+                                               (GHC.Prim.minusFloat# 1.0# wild9))) } } } } } } }
+                               GHC.Types.True -> $wgo ys ww } } }
+                    } in
+                    $wgo places 0.0# })
+                   places) -}
+a423f21dea528a41104b5be632226522
+  initElo :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.F# 1200.0#) -}
+c0d62a9b74c06a1335b754a11d52ef1b
+  newPlayer ::
+    Hearts.Types.PlayerId
+    -> Hearts.Types.PlayFunc
+    -> Hearts.Types.BidFunc
+    -> Hearts.Types.Player
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,U><L,A>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ (playerId :: Hearts.Types.PlayerId)
+                   (play :: Hearts.Types.PlayFunc)
+                   (ds :: Hearts.Types.BidFunc) ->
+                 Hearts.Types.Player
+                   playerId
+                   play
+                   Game.initElo
+                   Game.$fShowPlace7) -}
+81a042c30a8470e59680251981202412
+  oldPlayer ::
+    Hearts.Types.PlayerId
+    -> Hearts.Types.PlayFunc
+    -> Hearts.Types.BidFunc
+    -> GHC.Types.Float
+    -> GHC.Types.Int
+    -> Hearts.Types.Player
+  {- Arity: 5, HasNoCafRefs, Strictness: <L,U><L,U><L,A><L,U><L,U>m,
+     Unfolding: InlineRule (5, True, True)
+                (\ (playerId :: Hearts.Types.PlayerId)
+                   (play :: Hearts.Types.PlayFunc)
+                   (ds :: Hearts.Types.BidFunc)
+                   (elo :: GHC.Types.Float)
+                   (gamesPlayed :: GHC.Types.Int) ->
+                 Hearts.Types.Player playerId play elo gamesPlayed) -}
+05e3c4955eeaee2b37d4995fc07e8a40
+  placesFromGameScores ::
+    [Hearts.Types.Player] -> [Hearts.Types.GameScore] -> [Game.Place]
+  {- Arity: 2, Strictness: <L,U><L,1*U>,
+     Unfolding: (\ (players :: [Hearts.Types.Player])
+                   (x :: [Hearts.Types.GameScore]) ->
+                 letrec {
+                   go2 :: [GHC.Types.Int]
+                          -> [[Hearts.Types.GameScore]] -> [Game.Place]
+                     {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+                   = \ (ds :: [GHC.Types.Int]) (_ys :: [[Hearts.Types.GameScore]]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ Game.Place
+                       : ipv ipv1
+                       -> case _ys of wild1 {
+                            [] -> GHC.Types.[] @ Game.Place
+                            : ipv2 ipv3
+                            -> let {
+                                 r :: [Game.Place] = go2 ipv1 ipv3
+                               } in
+                               letrec {
+                                 go :: [Hearts.Types.GameScore] -> [Game.Place]
+                                   {- Arity: 1, Strictness: <S,1*U> -}
+                                 = \ (ds1 :: [Hearts.Types.GameScore]) ->
+                                   case ds1 of wild2 {
+                                     [] -> r
+                                     : y ys
+                                     -> GHC.Types.:
+                                          @ Game.Place
+                                          (case y of wild3 { Hearts.Types.GameScore ds2 ds3 ->
+                                           case ds2 of wild4 { Hearts.Types.Player playerId ds4 ds5 ds6 ->
+                                           Game.Place
+                                             playerId
+                                             ipv
+                                             (letrec {
+                                                go1 :: [Hearts.Types.Player] -> GHC.Types.Float
+                                                  <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                                                = \ (ds7 :: [Hearts.Types.Player]) ->
+                                                  case ds7 of wild5 {
+                                                    [] -> Game.initElo
+                                                    : y1 ys1
+                                                    -> case y1 of wild6 { Hearts.Types.Player ds8 ds9 ds10 ds11 ->
+                                                       case GHC.Base.eqString
+                                                              ds8
+                                                              playerId of wild7 {
+                                                         GHC.Types.False -> go1 ys1
+                                                         GHC.Types.True -> ds10 } } }
+                                              } in
+                                              go1 players) } })
+                                          (go ys) }
+                               } in
+                               go ipv2 } }
+                 } in
+                 go2
+                   Game.placesFromGameScores4
+                   (Data.OldList.groupBy
+                      @ Hearts.Types.GameScore
+                      Game.placesFromGameScores3
+                      (GHC.List.reverse1
+                         @ Hearts.Types.GameScore
+                         (GHC.Base.map
+                            @ (GHC.Types.Int, Hearts.Types.GameScore)
+                            @ Hearts.Types.GameScore
+                            (Data.Tuple.snd @ GHC.Types.Int @ Hearts.Types.GameScore)
+                            (Data.OldList.sortBy
+                               @ (GHC.Types.Int, Hearts.Types.GameScore)
+                               Game.placesFromGameScores2
+                               (GHC.Base.map
+                                  @ Hearts.Types.GameScore
+                                  @ (GHC.Types.Int, Hearts.Types.GameScore)
+                                  Game.placesFromGameScores1
+                                  x)))
+                         (GHC.Types.[] @ Hearts.Types.GameScore)))) -}
+6b1e717434ebb52a4c0a127147f14a50
+  placesFromGameScores1 ::
+    Hearts.Types.GameScore -> (GHC.Types.Int, Hearts.Types.GameScore)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Hearts.Types.GameScore) ->
+                 case x of wild { Hearts.Types.GameScore ds1 ds2 ->
+                 case ds2 of y { GHC.Types.I# ipv -> (y, wild) } }) -}
+a96251b8a61c39733ed854449f39d2e5
+  placesFromGameScores2 ::
+    (GHC.Types.Int, Hearts.Types.GameScore)
+    -> (GHC.Types.Int, Hearts.Types.GameScore) -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),A)><S(S(S)L),1*U(1*U(U),A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: (GHC.Types.Int, Hearts.Types.GameScore))
+                   (y :: (GHC.Types.Int, Hearts.Types.GameScore))[OneShot] ->
+                 case x of wild { (,) x1 ds1 ->
+                 case x1 of wild1 { GHC.Types.I# x# ->
+                 case y of wild2 { (,) x2 ds2 ->
+                 case x2 of wild3 { GHC.Types.I# y# ->
+                 GHC.Classes.compareInt# x# y# } } } }) -}
+9477378982af2d750f6d1a5bd53c9055
+  placesFromGameScores3 ::
+    Hearts.Types.GameScore -> Hearts.Types.GameScore -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(S)),1*U(A,1*U(U))><S(LS(S)),1*U(A,1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Hearts.Types.GameScore) (b :: Hearts.Types.GameScore) ->
+                 case a of wild { Hearts.Types.GameScore ds1 ds2 ->
+                 case b of wild1 { Hearts.Types.GameScore ds4 ds5 ->
+                 GHC.Classes.eqInt ds2 ds5 } }) -}
+020397c859a3055cb9ab2d6fdd57973e
+  placesFromGameScores4 :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Enum.eftInt 1# 9223372036854775807#) -}
+4915c9c6dd5ebfe25d58e3bcf5e35f31
+  sameField ::
+    GHC.Classes.Eq a => (t -> a) -> t -> t -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,C(U)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ t
+                   ($dEq :: GHC.Classes.Eq a)
+                   (f :: t -> a)
+                   (a1 :: t)
+                   (b :: t) ->
+                 GHC.Classes.== @ a $dEq (f a1) (f b)) -}
+30c4498d5c150c5d956d2de86f206715
+  updatePlayer ::
+    Hearts.Types.Player -> GHC.Types.Float -> Hearts.Types.Player
+  {- Arity: 2, Strictness: <S,1*U(U,U,1*U(U),1*U(1*U))><L,1*U(U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (p :: Hearts.Types.Player) (eloChange :: GHC.Types.Float) ->
+                 case p of wild { Hearts.Types.Player ds ds1 ds2 ds3 ->
+                 Hearts.Types.Player
+                   ds
+                   ds1
+                   (GHC.Float.plusFloat ds2 eloChange)
+                   (GHC.Enum.$fEnumInt_$csucc ds3) }) -}
+instance GHC.Show.Show [Game.Place] = Game.$fShowPlace
+trusted: trustworthy
+require own pkg trusted: True
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

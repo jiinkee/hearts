@@ -1,0 +1,1965 @@
+
+==================== FINAL INTERFACE ====================
+2019-10-04 09:13:40.9356567 UTC
+
+interface hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf:Cards 8064
+  interface hash: 14395f318b30fda9d0b9765b6aa3153b
+  ABI hash: d697d07d040dcb0fea10f2214ac7155e
+  export-list hash: cfa430ec5fd63670b639b890916903f0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8042b2e00b4bf5445e871ad940a72bd8
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Cards.Card{Cards.Card}
+  Cards.Rank{Cards.Ace Cards.Eight Cards.Five Cards.Four Cards.Jack Cards.King Cards.Nine Cards.Queen Cards.Seven Cards.Six Cards.Ten Cards.Three Cards.Two}
+  Cards.Suit{Cards.Club Cards.Diamond Cards.Heart Cards.Spade}
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Data.Char 2904a5c9a61cd1905998d0ede824665e
+import  -/  base-4.12.0.0:GHC.Base 954f4c258d193fab7048a63bfeb56dcf
+import  -/  base-4.12.0.0:GHC.Enum b48c8c8d2681aecfb61368272d07740d
+import  -/  base-4.12.0.0:GHC.Err 3a680f55541fe399f95f794018fc3593
+import  -/  base-4.12.0.0:GHC.Num 009f4fca9200daff9e3ffbe2d7676a2f
+import  -/  base-4.12.0.0:GHC.Read 50b14d50d8c271bd5efd5062fd745876
+import  -/  base-4.12.0.0:GHC.Show 48dce8b8129312101170e57c24f3ecbd
+import  -/  base-4.12.0.0:Prelude aea9afd24db8aed3563d7d850ea453c0
+import  -/  base-4.12.0.0:Text.Read e7452753e4b5b609f2d5caebdb00e722
+import  -/  deepseq-1.4.4.0:Control.DeepSeq 1a4e8e5d2b931a9bc1bf6720f6420241
+import  -/  ghc-prim-0.5.3:GHC.Classes 6002495dc43e58d28c87e5e5e058752a
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+e6943ba6fca54753ba45a70d571a4da2
+  $fBoundedRank :: GHC.Enum.Bounded Cards.Rank
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Cards.Rank Cards.Two Cards.Ace -}
+14641445c9cecb6d279c33641c171385
+  $fBoundedSuit :: GHC.Enum.Bounded Cards.Suit
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Cards.Suit Cards.Spade Cards.Heart -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank :: GHC.Enum.Enum Cards.Rank
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Rank
+                  Cards.$fEnumRank_$csucc
+                  Cards.$fEnumRank_$cpred
+                  Cards.$fEnumRank_$ctoEnum
+                  Cards.$fEnumRank_$cfromEnum
+                  Cards.$fEnumRank_$cenumFrom
+                  Cards.$fEnumRank_$cenumFromThen
+                  Cards.$fEnumRank_$cenumFromTo
+                  Cards.$fEnumRank_$cenumFromThenTo -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank1 :: Cards.Rank
+  {- Strictness: x -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank2 :: Cards.Rank
+  {- Strictness: x -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$cenumFrom :: Cards.Rank -> [Cards.Rank]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: (\ (a :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of a# { DEFAULT ->
+                 case GHC.Prim.># a# 12# of lwild {
+                   DEFAULT -> Cards.$fEnumRank_go a#
+                   1# -> GHC.Types.[] @ Cards.Rank } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$cenumFromThen ::
+    Cards.Rank -> Cards.Rank -> [Cards.Rank]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: (\ (a :: Cards.Rank) (b :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank b of b# { DEFAULT ->
+                 case GHC.Prim.># a# b# of lwild {
+                   DEFAULT
+                   -> case GHC.Prim.>=# b# a# of lwild1 {
+                        DEFAULT
+                        -> case GHC.Prim.># 12# b# of lwild2 {
+                             DEFAULT
+                             -> GHC.Types.:
+                                  @ Cards.Rank
+                                  (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                  (let {
+                                     delta :: GHC.Prim.Int# = GHC.Prim.-# b# a#
+                                   } in
+                                   let {
+                                     y' :: GHC.Prim.Int# = GHC.Prim.-# 12# delta
+                                   } in
+                                   letrec {
+                                     go_dn :: GHC.Prim.Int# -> [Cards.Rank]
+                                       {- Arity: 1, Strictness: <S,U> -}
+                                     = \ (x :: GHC.Prim.Int#) ->
+                                       case GHC.Prim.<# x y' of lwild3 {
+                                         DEFAULT
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (go_dn (GHC.Prim.+# x delta))
+                                         1#
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (GHC.Types.[] @ Cards.Rank) }
+                                   } in
+                                   go_dn b#)
+                             1#
+                             -> case GHC.Prim.># 12# a# of lwild3 {
+                                  DEFAULT
+                                  -> GHC.Types.:
+                                       @ Cards.Rank
+                                       (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                       (GHC.Types.[] @ Cards.Rank)
+                                  1# -> GHC.Types.[] @ Cards.Rank } }
+                        1#
+                        -> case GHC.Prim.<# 12# b# of lwild2 {
+                             DEFAULT
+                             -> GHC.Types.:
+                                  @ Cards.Rank
+                                  (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                  (let {
+                                     delta :: GHC.Prim.Int# = GHC.Prim.-# b# a#
+                                   } in
+                                   let {
+                                     y' :: GHC.Prim.Int# = GHC.Prim.-# 12# delta
+                                   } in
+                                   letrec {
+                                     go_up :: GHC.Prim.Int# -> [Cards.Rank]
+                                       {- Arity: 1, Strictness: <S,U> -}
+                                     = \ (x :: GHC.Prim.Int#) ->
+                                       case GHC.Prim.># x y' of lwild3 {
+                                         DEFAULT
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (go_up (GHC.Prim.+# x delta))
+                                         1#
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (GHC.Types.[] @ Cards.Rank) }
+                                   } in
+                                   go_up b#)
+                             1#
+                             -> case GHC.Prim.<# 12# a# of lwild3 {
+                                  DEFAULT
+                                  -> GHC.Types.:
+                                       @ Cards.Rank
+                                       (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                       (GHC.Types.[] @ Cards.Rank)
+                                  1# -> GHC.Types.[] @ Cards.Rank } } }
+                   1#
+                   -> case GHC.Prim.>=# b# a# of lwild1 {
+                        DEFAULT
+                        -> case GHC.Prim.># 0# b# of lwild2 {
+                             DEFAULT
+                             -> GHC.Types.:
+                                  @ Cards.Rank
+                                  (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                  (let {
+                                     delta :: GHC.Prim.Int# = GHC.Prim.-# b# a#
+                                   } in
+                                   let {
+                                     y' :: GHC.Prim.Int# = GHC.Prim.-# 0# delta
+                                   } in
+                                   letrec {
+                                     go_dn :: GHC.Prim.Int# -> [Cards.Rank]
+                                       {- Arity: 1, Strictness: <S,U> -}
+                                     = \ (x :: GHC.Prim.Int#) ->
+                                       case GHC.Prim.<# x y' of lwild3 {
+                                         DEFAULT
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (go_dn (GHC.Prim.+# x delta))
+                                         1#
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (GHC.Types.[] @ Cards.Rank) }
+                                   } in
+                                   go_dn b#)
+                             1#
+                             -> case GHC.Prim.># 0# a# of lwild3 {
+                                  DEFAULT
+                                  -> GHC.Types.:
+                                       @ Cards.Rank
+                                       (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                       (GHC.Types.[] @ Cards.Rank)
+                                  1# -> GHC.Types.[] @ Cards.Rank } }
+                        1#
+                        -> case GHC.Prim.<# 0# b# of lwild2 {
+                             DEFAULT
+                             -> GHC.Types.:
+                                  @ Cards.Rank
+                                  (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                  (let {
+                                     delta :: GHC.Prim.Int# = GHC.Prim.-# b# a#
+                                   } in
+                                   let {
+                                     y' :: GHC.Prim.Int# = GHC.Prim.-# 0# delta
+                                   } in
+                                   letrec {
+                                     go_up :: GHC.Prim.Int# -> [Cards.Rank]
+                                       {- Arity: 1, Strictness: <S,U> -}
+                                     = \ (x :: GHC.Prim.Int#) ->
+                                       case GHC.Prim.># x y' of lwild3 {
+                                         DEFAULT
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (go_up (GHC.Prim.+# x delta))
+                                         1#
+                                         -> GHC.Types.:
+                                              @ Cards.Rank
+                                              (GHC.Prim.tagToEnum# @ Cards.Rank x)
+                                              (GHC.Types.[] @ Cards.Rank) }
+                                   } in
+                                   go_up b#)
+                             1#
+                             -> case GHC.Prim.<# 0# a# of lwild3 {
+                                  DEFAULT
+                                  -> GHC.Types.:
+                                       @ Cards.Rank
+                                       (GHC.Prim.tagToEnum# @ Cards.Rank a#)
+                                       (GHC.Types.[] @ Cards.Rank)
+                                  1# -> GHC.Types.[] @ Cards.Rank } } } } } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$cenumFromThenTo ::
+    Cards.Rank -> Cards.Rank -> Cards.Rank -> [Cards.Rank]
+  {- Arity: 3, Strictness: <S,U><S,U><S,U> -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$cenumFromTo :: Cards.Rank -> Cards.Rank -> [Cards.Rank]
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: (\ (x :: Cards.Rank) (y :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank x of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank y of a#1 { DEFAULT ->
+                 case GHC.Prim.># a# a#1 of lwild {
+                   DEFAULT
+                   -> letrec {
+                        go :: GHC.Prim.Int# -> [Cards.Rank]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x1 :: GHC.Prim.Int#) ->
+                          GHC.Types.:
+                            @ Cards.Rank
+                            (case GHC.Prim.>=# x1 0# of lwild1 {
+                               DEFAULT -> Cards.$wlvl x1
+                               1#
+                               -> case GHC.Prim.<=# x1 12# of lwild2 {
+                                    DEFAULT -> Cards.$wlvl x1
+                                    1# -> GHC.Prim.tagToEnum# @ Cards.Rank x1 } })
+                            (case GHC.Prim.==# x1 a#1 of lwild1 {
+                               DEFAULT -> go (GHC.Prim.+# x1 1#)
+                               1# -> GHC.Types.[] @ Cards.Rank })
+                      } in
+                      go a#
+                   1# -> GHC.Types.[] @ Cards.Rank } } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$cfromEnum :: Cards.Rank -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of a# { DEFAULT ->
+                 GHC.Types.I# a# }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$cpred :: Cards.Rank -> Cards.Rank
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Cards.Rank) ->
+                 case a of lwild {
+                   DEFAULT
+                   -> case GHC.Prim.dataToTag# @ Cards.Rank lwild of a# { DEFAULT ->
+                      GHC.Prim.tagToEnum# @ Cards.Rank (GHC.Prim.+# a# -1#) }
+                   Cards.Two -> Cards.$fEnumRank1 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$csucc :: Cards.Rank -> Cards.Rank
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Cards.Rank) ->
+                 case a of lwild {
+                   DEFAULT
+                   -> case GHC.Prim.dataToTag# @ Cards.Rank lwild of a# { DEFAULT ->
+                      GHC.Prim.tagToEnum# @ Cards.Rank (GHC.Prim.+# a# 1#) }
+                   Cards.Ace -> Cards.$fEnumRank2 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_$ctoEnum :: GHC.Types.Int -> Cards.Rank
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 -> Cards.$w$ctoEnum ww1 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEnumRank_go :: GHC.Prim.Int# -> [Cards.Rank]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m2 -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit :: GHC.Enum.Enum Cards.Suit
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Suit
+                  Cards.$fEnumSuit_$csucc
+                  Cards.$fEnumSuit_$cpred
+                  Cards.$fEnumSuit_$ctoEnum
+                  Cards.$fEnumSuit_$cfromEnum
+                  Cards.$fEnumSuit_$cenumFrom
+                  Cards.$fEnumSuit_$cenumFromThen
+                  Cards.$fEnumSuit_$cenumFromTo
+                  Cards.$fEnumSuit_$cenumFromThenTo -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit1 :: [Cards.Suit]
+  {- Unfolding: (Cards.$fEnumSuit_go4 3#) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit2 :: [Cards.Suit]
+  {- Unfolding: (Cards.$fEnumSuit_go4 2#) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit3 :: [Cards.Suit]
+  {- Unfolding: (Cards.$fEnumSuit_go4 1#) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit4 :: [Cards.Suit]
+  {- Unfolding: (Cards.$fEnumSuit_go4 0#) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit5 :: Cards.Suit
+  {- Strictness: x -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit6 :: Cards.Suit
+  {- Strictness: x -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$cenumFrom :: Cards.Suit -> [Cards.Suit]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (a :: Cards.Suit) ->
+                 case a of wild {
+                   Cards.Spade -> Cards.$fEnumSuit4
+                   Cards.Club -> Cards.$fEnumSuit3
+                   Cards.Diamond -> Cards.$fEnumSuit2
+                   Cards.Heart -> Cards.$fEnumSuit1 }) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$cenumFromThen ::
+    Cards.Suit -> Cards.Suit -> [Cards.Suit]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$cenumFromThenTo ::
+    Cards.Suit -> Cards.Suit -> Cards.Suit -> [Cards.Suit]
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$cenumFromTo :: Cards.Suit -> Cards.Suit -> [Cards.Suit]
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: Cards.Suit) (y :: Cards.Suit) ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Cards.Suit]
+                     <join 1> {- Arity: 1, Strictness: <S,U> -}
+                   = \ (x1 :: GHC.Prim.Int#)[OneShot] ->
+                     case y of wild {
+                       Cards.Spade
+                       -> case GHC.Prim.># x1 0# of lwild {
+                            DEFAULT -> Cards.$fEnumSuit_go3 x1
+                            1# -> GHC.Types.[] @ Cards.Suit }
+                       Cards.Club
+                       -> case GHC.Prim.># x1 1# of lwild {
+                            DEFAULT -> Cards.$fEnumSuit_go2 x1
+                            1# -> GHC.Types.[] @ Cards.Suit }
+                       Cards.Diamond
+                       -> case GHC.Prim.># x1 2# of lwild {
+                            DEFAULT -> Cards.$fEnumSuit_go1 x1
+                            1# -> GHC.Types.[] @ Cards.Suit }
+                       Cards.Heart
+                       -> case GHC.Prim.># x1 3# of lwild {
+                            DEFAULT -> Cards.$fEnumSuit_go x1
+                            1# -> GHC.Types.[] @ Cards.Suit } }
+                 } in
+                 case x of wild {
+                   Cards.Spade -> $j 0#
+                   Cards.Club -> $j 1#
+                   Cards.Diamond -> $j 2#
+                   Cards.Heart -> $j 3# }) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$cfromEnum :: Cards.Suit -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Cards.Suit) ->
+                 case a of wild {
+                   Cards.Spade -> GHC.Types.I# 0#
+                   Cards.Club -> GHC.Types.I# 1#
+                   Cards.Diamond -> GHC.Types.I# 2#
+                   Cards.Heart -> GHC.Types.I# 3# }) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$cpred :: Cards.Suit -> Cards.Suit
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Cards.Suit) ->
+                 case a of wild {
+                   Cards.Spade -> Cards.$fEnumSuit5
+                   Cards.Club -> Cards.Spade
+                   Cards.Diamond -> Cards.Club
+                   Cards.Heart -> Cards.Diamond }) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$csucc :: Cards.Suit -> Cards.Suit
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (a :: Cards.Suit) ->
+                 case a of wild {
+                   Cards.Spade -> Cards.Club
+                   Cards.Club -> Cards.Diamond
+                   Cards.Diamond -> Cards.Heart
+                   Cards.Heart -> Cards.$fEnumSuit6 }) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_$ctoEnum :: GHC.Types.Int -> Cards.Suit
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 -> Cards.$w$ctoEnum1 ww1 }) -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_go :: GHC.Prim.Int# -> [Cards.Suit]
+  {- Arity: 1, Strictness: <L,U>m2 -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_go1 :: GHC.Prim.Int# -> [Cards.Suit]
+  {- Arity: 1, Strictness: <L,U>m2 -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_go2 :: GHC.Prim.Int# -> [Cards.Suit]
+  {- Arity: 1, Strictness: <L,U>m2 -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_go3 :: GHC.Prim.Int# -> [Cards.Suit]
+  {- Arity: 1, Strictness: <L,U>m2 -}
+14641445c9cecb6d279c33641c171385
+  $fEnumSuit_go4 :: GHC.Prim.Int# -> [Cards.Suit]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m2 -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fEqCard :: GHC.Classes.Eq Cards.Card
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Card Cards.$fEqCard_$c== Cards.$fEqCard_$c/= -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fEqCard_$c/= :: Cards.Card -> Cards.Card -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,U)><S(SL),1*U(1*U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Cards.Card) (y :: Cards.Card) ->
+                 case Cards.$fEqCard_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fEqCard_$c== :: Cards.Card -> Cards.Card -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,U)><S(SL),1*U(1*U,U)>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cards.Card) (w1 :: Cards.Card) ->
+                 case w of ww { Cards.Card ww1 ww2 ->
+                 case w1 of ww3 { Cards.Card ww4 ww5 ->
+                 Cards.$w$c== ww1 ww2 ww4 ww5 } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEqRank :: GHC.Classes.Eq Cards.Rank
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Rank Cards.$fEqRank_$c== Cards.$fEqRank_$c/= -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEqRank_$c/= :: Cards.Rank -> Cards.Rank -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Cards.Rank) (y :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank x of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank y of b# { DEFAULT ->
+                 case GHC.Prim.==# a# b# of lwild {
+                   DEFAULT -> GHC.Types.True 1# -> GHC.Types.False } } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fEqRank_$c== :: Cards.Rank -> Cards.Rank -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cards.Rank) (b :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank b of b# { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# a# b#) } }) -}
+14641445c9cecb6d279c33641c171385
+  $fEqSuit :: GHC.Classes.Eq Cards.Suit
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Suit Cards.$fEqSuit_$c== Cards.$fEqSuit_$c/= -}
+14641445c9cecb6d279c33641c171385
+  $fEqSuit_$c/= :: Cards.Suit -> Cards.Suit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Cards.Suit) (y :: Cards.Suit) ->
+                 case x of wild {
+                   Cards.Spade
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Cards.Spade -> GHC.Types.False }
+                   Cards.Club
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Cards.Club -> GHC.Types.False }
+                   Cards.Diamond
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Cards.Diamond -> GHC.Types.False }
+                   Cards.Heart
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Cards.Heart -> GHC.Types.False } }) -}
+14641445c9cecb6d279c33641c171385
+  $fEqSuit_$c== :: Cards.Suit -> Cards.Suit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Cards.Suit) (ds1 :: Cards.Suit) ->
+                 case ds of wild {
+                   Cards.Spade
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Cards.Spade -> GHC.Types.True }
+                   Cards.Club
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Cards.Club -> GHC.Types.True }
+                   Cards.Diamond
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Cards.Diamond -> GHC.Types.True }
+                   Cards.Heart
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Cards.Heart -> GHC.Types.True } }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fNFDataCard :: Control.DeepSeq.NFData Cards.Card
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                (Control.DeepSeq.rwhnf @ Cards.Card)
+                  `cast`
+                (Sym (Control.DeepSeq.N:NFData[0] <Cards.Card>_N)) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard :: GHC.Classes.Ord Cards.Card
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Card
+                  Cards.$fEqCard
+                  Cards.$fOrdCard_$ccompare
+                  Cards.$fOrdCard_$c<
+                  Cards.$fOrdCard_$c<=
+                  Cards.$fOrdCard_$c>
+                  Cards.$fOrdCard_$c>=
+                  Cards.$fOrdCard_$cmax
+                  Cards.$fOrdCard_$cmin -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard_$c< :: Cards.Card -> Cards.Card -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,U)><S(SL),1*U(1*U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Card) (y :: Cards.Card) ->
+                 case Cards.$fOrdCard_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard_$c<= :: Cards.Card -> Cards.Card -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,U)><S(SL),1*U(1*U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Card) (y :: Cards.Card) ->
+                 case Cards.$fOrdCard_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard_$c> :: Cards.Card -> Cards.Card -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,U)><S(SL),1*U(1*U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Card) (y :: Cards.Card) ->
+                 case Cards.$fOrdCard_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard_$c>= :: Cards.Card -> Cards.Card -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,U)><S(SL),1*U(1*U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Card) (y :: Cards.Card) ->
+                 case Cards.$fOrdCard_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard_$ccompare ::
+    Cards.Card -> Cards.Card -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,U)><S(SL),1*U(1*U,U)>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Cards.Card) (w1 :: Cards.Card) ->
+                 case w of ww { Cards.Card ww1 ww2 ->
+                 case w1 of ww3 { Cards.Card ww4 ww5 ->
+                 Cards.$w$ccompare ww1 ww2 ww4 ww5 } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdCard_$ccompare1 ::
+    Cards.Rank -> Cards.Rank -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cards.Rank) (b :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank b of b# { DEFAULT ->
+                 case GHC.Prim.<# a# b# of lwild {
+                   DEFAULT
+                   -> case GHC.Prim.==# a# b# of lwild1 {
+                        DEFAULT -> GHC.Types.GT 1# -> GHC.Types.EQ }
+                   1# -> GHC.Types.LT } } }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard_$cmax :: Cards.Card -> Cards.Card -> Cards.Card
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(U,U)><S(SL),1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Card) (y :: Cards.Card) ->
+                 case Cards.$fOrdCard_$ccompare x y of wild {
+                   DEFAULT -> y GHC.Types.GT -> x }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fOrdCard_$cmin :: Cards.Card -> Cards.Card -> Cards.Card
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(U,U)><S(SL),1*U(U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Card) (y :: Cards.Card) ->
+                 case Cards.$fOrdCard_$ccompare x y of wild {
+                   DEFAULT -> x GHC.Types.GT -> y }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdRank :: GHC.Classes.Ord Cards.Rank
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Rank
+                  Cards.$fEqRank
+                  Cards.$fOrdCard_$ccompare1
+                  Cards.$fOrdRank_$c<
+                  Cards.$fOrdRank_$c<=
+                  Cards.$fOrdRank_$c>
+                  Cards.$fOrdRank_$c>=
+                  Cards.$fOrdRank_$cmax
+                  Cards.$fOrdRank_$cmin -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdRank_$c< :: Cards.Rank -> Cards.Rank -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cards.Rank) (b :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank b of b# { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.<# a# b#) } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdRank_$c<= :: Cards.Rank -> Cards.Rank -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cards.Rank) (b :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank b of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of b# { DEFAULT ->
+                 case GHC.Prim.<# a# b# of lwild {
+                   DEFAULT -> GHC.Types.True 1# -> GHC.Types.False } } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdRank_$c> :: Cards.Rank -> Cards.Rank -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cards.Rank) (b :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank b of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of b# { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.<# a# b#) } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdRank_$c>= :: Cards.Rank -> Cards.Rank -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Cards.Rank) (b :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank a of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank b of b# { DEFAULT ->
+                 case GHC.Prim.<# a# b# of lwild {
+                   DEFAULT -> GHC.Types.True 1# -> GHC.Types.False } } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdRank_$cmax :: Cards.Rank -> Cards.Rank -> Cards.Rank
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Rank) (y :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank y of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank x of b# { DEFAULT ->
+                 case GHC.Prim.<# a# b# of lwild { DEFAULT -> y 1# -> x } } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fOrdRank_$cmin :: Cards.Rank -> Cards.Rank -> Cards.Rank
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Cards.Rank) (y :: Cards.Rank) ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank y of a# { DEFAULT ->
+                 case GHC.Prim.dataToTag# @ Cards.Rank x of b# { DEFAULT ->
+                 case GHC.Prim.<# a# b# of lwild { DEFAULT -> x 1# -> y } } }) -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit :: GHC.Classes.Ord Cards.Suit
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Suit
+                  Cards.$fEqSuit
+                  Cards.$fOrdSuit_$ccompare
+                  Cards.$fOrdSuit_$c<
+                  Cards.$fOrdSuit_$c<=
+                  Cards.$fOrdSuit_$c>
+                  Cards.$fOrdSuit_$c>=
+                  Cards.$fOrdSuit_$cmax
+                  Cards.$fOrdSuit_$cmin -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit_$c< :: Cards.Suit -> Cards.Suit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Cards.Suit) (b :: Cards.Suit) ->
+                 case a of wild {
+                   Cards.Spade
+                   -> case b of wild1 {
+                        Cards.Spade -> GHC.Types.False
+                        Cards.Club -> GHC.Types.True
+                        Cards.Diamond -> GHC.Types.True
+                        Cards.Heart -> GHC.Types.True }
+                   Cards.Club
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cards.Diamond -> GHC.Types.True
+                        Cards.Heart -> GHC.Types.True }
+                   Cards.Diamond
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Cards.Heart -> GHC.Types.True }
+                   Cards.Heart -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit_$c<= :: Cards.Suit -> Cards.Suit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Cards.Suit) (b :: Cards.Suit) ->
+                 case b of wild {
+                   Cards.Spade
+                   -> case a of wild1 {
+                        Cards.Spade -> GHC.Types.True
+                        Cards.Club -> GHC.Types.False
+                        Cards.Diamond -> GHC.Types.False
+                        Cards.Heart -> GHC.Types.False }
+                   Cards.Club
+                   -> case a of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Cards.Diamond -> GHC.Types.False
+                        Cards.Heart -> GHC.Types.False }
+                   Cards.Diamond
+                   -> case a of wild1 {
+                        DEFAULT -> GHC.Types.True Cards.Heart -> GHC.Types.False }
+                   Cards.Heart -> case a of wild1 { DEFAULT -> GHC.Types.True } }) -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit_$c> :: Cards.Suit -> Cards.Suit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (a :: Cards.Suit) (b :: Cards.Suit) ->
+                 Cards.$fOrdSuit_$c< b a) -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit_$c>= :: Cards.Suit -> Cards.Suit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Cards.Suit) (b :: Cards.Suit) ->
+                 case a of wild {
+                   Cards.Spade
+                   -> case b of wild1 {
+                        Cards.Spade -> GHC.Types.True
+                        Cards.Club -> GHC.Types.False
+                        Cards.Diamond -> GHC.Types.False
+                        Cards.Heart -> GHC.Types.False }
+                   Cards.Club
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Cards.Diamond -> GHC.Types.False
+                        Cards.Heart -> GHC.Types.False }
+                   Cards.Diamond
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Cards.Heart -> GHC.Types.False }
+                   Cards.Heart -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit_$ccompare ::
+    Cards.Suit -> Cards.Suit -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Cards.Suit) (b :: Cards.Suit) ->
+                 case a of wild {
+                   Cards.Spade
+                   -> case b of wild1 {
+                        Cards.Spade -> GHC.Types.EQ
+                        Cards.Club -> GHC.Types.LT
+                        Cards.Diamond -> GHC.Types.LT
+                        Cards.Heart -> GHC.Types.LT }
+                   Cards.Club
+                   -> case b of wild1 {
+                        Cards.Spade -> GHC.Types.GT
+                        Cards.Club -> GHC.Types.EQ
+                        Cards.Diamond -> GHC.Types.LT
+                        Cards.Heart -> GHC.Types.LT }
+                   Cards.Diamond
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Cards.Diamond -> GHC.Types.EQ
+                        Cards.Heart -> GHC.Types.LT }
+                   Cards.Heart
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT Cards.Heart -> GHC.Types.EQ } }) -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit_$cmax :: Cards.Suit -> Cards.Suit -> Cards.Suit
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: Cards.Suit) (y :: Cards.Suit) ->
+                 case y of wild {
+                   Cards.Spade -> x
+                   Cards.Club
+                   -> case x of wild1 {
+                        DEFAULT -> Cards.Club
+                        Cards.Diamond -> Cards.Diamond
+                        Cards.Heart -> Cards.Heart }
+                   Cards.Diamond
+                   -> case x of wild1 {
+                        DEFAULT -> Cards.Diamond Cards.Heart -> Cards.Heart }
+                   Cards.Heart -> case x of wild1 { DEFAULT -> Cards.Heart } }) -}
+14641445c9cecb6d279c33641c171385
+  $fOrdSuit_$cmin :: Cards.Suit -> Cards.Suit -> Cards.Suit
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (x :: Cards.Suit) (y :: Cards.Suit) ->
+                 case y of wild {
+                   Cards.Spade -> case x of wild1 { DEFAULT -> Cards.Spade }
+                   Cards.Club
+                   -> case x of wild1 {
+                        DEFAULT -> wild1
+                        Cards.Diamond -> Cards.Club
+                        Cards.Heart -> Cards.Club }
+                   Cards.Diamond
+                   -> case x of wild1 {
+                        DEFAULT -> wild1 Cards.Heart -> Cards.Diamond }
+                   Cards.Heart -> x }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fReadCard :: GHC.Read.Read Cards.Card
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Card
+                  Cards.$fReadCard_$creadsPrec
+                  Cards.$fReadCard_$creadList
+                  Cards.$fReadCard4
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <Cards.Card>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                              <Cards.Card>_R))
+                  Cards.$fReadCard1
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <[Cards.Card]>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                <[Cards.Card]>_R)) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fReadCard1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Cards.Card] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: [Cards.Card] -> Text.ParserCombinators.ReadP.P b) ->
+                 case Text.ParserCombinators.ReadP.$wreadS_to_P
+                        @ [Cards.Card]
+                        Cards.$fReadCard_$creadList
+                        @ b
+                        w1 of ww { Unit# ww1 ->
+                 Text.ParserCombinators.ReadP.Look @ b ww1 }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fReadCard2 :: Text.ParserCombinators.ReadP.P [Cards.Card]
+  {- Unfolding: (((GHC.Read.list
+                     @ Cards.Card
+                     Cards.$fReadCard4
+                       `cast`
+                     ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                       ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                     <Cards.Card>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                 <Cards.Card>_R)))
+                    `cast`
+                  (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <[Cards.Card]>_R)
+                    Cards.$fReadCard3)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0] <[Cards.Card]>_R)
+                   @ [Cards.Card]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [Cards.Card])) -}
+6d445689f7ac18733cb65015d7b87f67
+  $fReadCard3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fReadCard4 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Cards.Card -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta :: Cards.Card -> Text.ParserCombinators.ReadP.P b) ->
+                 case Text.ParserCombinators.ReadP.$wreadS_to_P
+                        @ Cards.Card
+                        (Cards.$fReadCard_$creadsPrec n)
+                        @ b
+                        eta of ww { Unit# ww1 ->
+                 Text.ParserCombinators.ReadP.Look @ b ww1 }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fReadCard_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [Cards.Card]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [Cards.Card]
+                   Cards.$fReadCard2) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fReadCard_$creadsPrec ::
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS Cards.Card
+  {- Arity: 2, Strictness: <L,A><S,1*U>, Inline: [2],
+     Unfolding: InlineRule (2, True, True)
+                (\ (w :: GHC.Types.Int) (w1 :: GHC.Base.String) ->
+                 Cards.$w$creadsPrec w1) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fReadCard_go ::
+    [(Cards.Suit, GHC.Base.String)] -> [(Cards.Card, GHC.Base.String)]
+  {- Arity: 1, Strictness: <S,1*U> -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fReadRank :: GHC.Read.Read Cards.Rank
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Rank
+                  Cards.$fReadRank_$creadsPrec
+                  Cards.$fReadRank_$creadList
+                  Cards.$fReadRank3
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <Cards.Rank>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                              <Cards.Rank>_R))
+                  Cards.$fReadRank1
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <[Cards.Rank]>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                <[Cards.Rank]>_R)) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fReadRank1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Cards.Rank] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: [Cards.Rank] -> Text.ParserCombinators.ReadP.P b) ->
+                 case Text.ParserCombinators.ReadP.$wreadS_to_P
+                        @ [Cards.Rank]
+                        Cards.$fReadRank_$creadList
+                        @ b
+                        w1 of ww { Unit# ww1 ->
+                 Text.ParserCombinators.ReadP.Look @ b ww1 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fReadRank2 :: Text.ParserCombinators.ReadP.P [Cards.Rank]
+  {- Unfolding: (((GHC.Read.list
+                     @ Cards.Rank
+                     Cards.$fReadRank3
+                       `cast`
+                     ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                       ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                     <Cards.Rank>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                 <Cards.Rank>_R)))
+                    `cast`
+                  (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <[Cards.Rank]>_R)
+                    Cards.$fReadCard3)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0] <[Cards.Rank]>_R)
+                   @ [Cards.Rank]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [Cards.Rank])) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fReadRank3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Cards.Rank -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta :: Cards.Rank -> Text.ParserCombinators.ReadP.P b) ->
+                 case Text.ParserCombinators.ReadP.$wreadS_to_P
+                        @ Cards.Rank
+                        (Cards.$fReadRank_$creadsPrec n)
+                        @ b
+                        eta of ww { Unit# ww1 ->
+                 Text.ParserCombinators.ReadP.Look @ b ww1 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fReadRank_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [Cards.Rank]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [Cards.Rank]
+                   Cards.$fReadRank2) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fReadRank_$creadsPrec ::
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS Cards.Rank
+  {- Arity: 2, Strictness: <L,A><S,1*U>, Inline: [2],
+     Unfolding: InlineRule (2, True, True)
+                (\ (w :: GHC.Types.Int) (w1 :: GHC.Base.String) ->
+                 Cards.$w$creadsPrec2 w1) -}
+14641445c9cecb6d279c33641c171385
+  $fReadSuit :: GHC.Read.Read Cards.Suit
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Suit
+                  Cards.$fReadSuit_$creadsPrec
+                  Cards.$fReadSuit_$creadList
+                  Cards.$fReadSuit3
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <Cards.Suit>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                              <Cards.Suit>_R))
+                  Cards.$fReadSuit1
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <[Cards.Suit]>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                <[Cards.Suit]>_R)) -}
+14641445c9cecb6d279c33641c171385
+  $fReadSuit1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Cards.Suit] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: [Cards.Suit] -> Text.ParserCombinators.ReadP.P b) ->
+                 case Text.ParserCombinators.ReadP.$wreadS_to_P
+                        @ [Cards.Suit]
+                        Cards.$fReadSuit_$creadList
+                        @ b
+                        w1 of ww { Unit# ww1 ->
+                 Text.ParserCombinators.ReadP.Look @ b ww1 }) -}
+14641445c9cecb6d279c33641c171385
+  $fReadSuit2 :: Text.ParserCombinators.ReadP.P [Cards.Suit]
+  {- Unfolding: (((GHC.Read.list
+                     @ Cards.Suit
+                     Cards.$fReadSuit3
+                       `cast`
+                     ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                       ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                     <Cards.Suit>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                 <Cards.Suit>_R)))
+                    `cast`
+                  (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <[Cards.Suit]>_R)
+                    Cards.$fReadCard3)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0] <[Cards.Suit]>_R)
+                   @ [Cards.Suit]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [Cards.Suit])) -}
+14641445c9cecb6d279c33641c171385
+  $fReadSuit3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Cards.Suit -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><L,C(U)>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta :: Cards.Suit -> Text.ParserCombinators.ReadP.P b) ->
+                 case Text.ParserCombinators.ReadP.$wreadS_to_P
+                        @ Cards.Suit
+                        (Cards.$fReadSuit_$creadsPrec n)
+                        @ b
+                        eta of ww { Unit# ww1 ->
+                 Text.ParserCombinators.ReadP.Look @ b ww1 }) -}
+14641445c9cecb6d279c33641c171385
+  $fReadSuit_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [Cards.Suit]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [Cards.Suit]
+                   Cards.$fReadSuit2) -}
+14641445c9cecb6d279c33641c171385
+  $fReadSuit_$creadsPrec ::
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS Cards.Suit
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>, Inline: [2],
+     Unfolding: InlineRule (2, True, True)
+                (\ (w :: GHC.Types.Int) (w1 :: GHC.Base.String) ->
+                 Cards.$w$creadsPrec1 w1) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fShowCard :: GHC.Show.Show Cards.Card
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Card
+                  Cards.$fShowCard_$cshowsPrec
+                  Cards.$fShowCard_$cshow
+                  Cards.$fShowCard_$cshowList -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fShowCard1 :: Cards.Card -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S(SL),1*U(1*U,1*U)><L,1*U>,
+     Unfolding: (\ (w :: Cards.Card) (w1 :: GHC.Base.String) ->
+                 case w of ww { Cards.Card ww1 ww2 ->
+                 Cards.$w$cshowsPrec ww1 ww2 w1 }) -}
+d1751edc0dbd9e78ed86d8e35b377b48
+  $fShowCard10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard11) -}
+b6681287f6c9f132c82aaa2a5471fceb
+  $fShowCard11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("A"#) -}
+70e5246a6ed374a4c14e9aa1cdd87466
+  $fShowCard12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard13) -}
+4702cb069d76c257ed23087714e261a9
+  $fShowCard13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("K"#) -}
+43e799294e64433c99442ea026293133
+  $fShowCard14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard15) -}
+b7d89bd6df0da36e43cc7421ccd606ac
+  $fShowCard15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Q"#) -}
+8f38003e28214347ed35bf54e82e9f04
+  $fShowCard16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard17) -}
+04ebf40ce124ff23f34a9c6dba504663
+  $fShowCard17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("J"#) -}
+926bc50d966b29cedc85443b7602fe07
+  $fShowCard2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard3) -}
+944ee06f0f1ad0f89c21f879fc9f5340
+  $fShowCard3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("H"#) -}
+9a97427e10c9fbdd6e7d9cb2e54348c2
+  $fShowCard4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard5) -}
+6d831ec167e8082f05973e23f7be0ffe
+  $fShowCard5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("D"#) -}
+a399449784a4054b499c283fbc34e6ce
+  $fShowCard6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard7) -}
+fcde8b09e8b6cf405bcfab92e9e7ae85
+  $fShowCard7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("C"#) -}
+36ab7cb31289eb710cecc12d02b56791
+  $fShowCard8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Cards.$fShowCard9) -}
+6443243bf0e5e9a7ac4a67b64881c1c3
+  $fShowCard9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("S"#) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fShowCard_$cshow :: Cards.Card -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(SL),1*U(1*U,1*U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Cards.Card) ->
+                 case w of ww { Cards.Card ww1 ww2 -> Cards.$w$cshow ww1 ww2 }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fShowCard_$cshowList :: [Cards.Card] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Cards.Card]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Cards.Card Cards.$fShowCard1 ls s) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $fShowCard_$cshowsPrec ::
+    GHC.Types.Int -> Cards.Card -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S(SL),1*U(1*U,1*U)><L,1*U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Cards.Card)
+                   (w2 :: GHC.Base.String) ->
+                 case w1 of ww { Cards.Card ww1 ww2 ->
+                 Cards.$w$cshowsPrec ww1 ww2 w2 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fShowRank :: GHC.Show.Show Cards.Rank
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Rank
+                  Cards.$fShowRank_$cshowsPrec
+                  Cards.$fShowRank_$cshow
+                  Cards.$fShowRank_$cshowList -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fShowRank_$cshow :: Cards.Rank -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Cards.Rank) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> case GHC.Prim.dataToTag# @ Cards.Rank wild of a# { DEFAULT ->
+                      case GHC.Show.$wshowSignedInt
+                             0#
+                             (GHC.Prim.+# a# 2#)
+                             (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                      GHC.Types.: @ GHC.Types.Char ww5 ww6 } }
+                   Cards.Jack -> Cards.$fShowCard16
+                   Cards.Queen -> Cards.$fShowCard14
+                   Cards.King -> Cards.$fShowCard12
+                   Cards.Ace -> Cards.$fShowCard10 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fShowRank_$cshowList :: [Cards.Rank] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Cards.Rank]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Cards.Rank Cards.$w$cshowsPrec1 ls s) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $fShowRank_$cshowsPrec ::
+    GHC.Types.Int -> Cards.Rank -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Cards.Rank)
+                   (w2 :: GHC.Base.String) ->
+                 Cards.$w$cshowsPrec1 w1 w2) -}
+14641445c9cecb6d279c33641c171385
+  $fShowSuit :: GHC.Show.Show Cards.Suit
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Cards.Suit
+                  Cards.$fShowSuit_$cshowsPrec
+                  Cards.$fShowSuit_$cshow
+                  Cards.$fShowSuit_$cshowList -}
+14641445c9cecb6d279c33641c171385
+  $fShowSuit_$cshow :: Cards.Suit -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Cards.Suit) ->
+                 case ds of wild {
+                   Cards.Spade -> Cards.$fShowCard8
+                   Cards.Club -> Cards.$fShowCard6
+                   Cards.Diamond -> Cards.$fShowCard4
+                   Cards.Heart -> Cards.$fShowCard2 }) -}
+14641445c9cecb6d279c33641c171385
+  $fShowSuit_$cshowList :: [Cards.Suit] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Cards.Suit]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Cards.Suit Cards.$w$cshowsPrec2 ls s) -}
+14641445c9cecb6d279c33641c171385
+  $fShowSuit_$cshowsPrec ::
+    GHC.Types.Int -> Cards.Suit -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Cards.Suit)
+                   (w2 :: GHC.Base.String) ->
+                 Cards.$w$cshowsPrec2 w1 w2) -}
+f36f1c004596d0248f63d14bdba0f11e
+  $tc'Ace :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5158461825996468908##
+                   6515418033271454796##
+                   Cards.$trModule
+                   Cards.$tc'Ace2
+                   0#
+                   Cards.$tc'Ace1) -}
+86034e3ba42f8568df4d4e60a3517e97
+  $tc'Ace1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+1038ec2d5f966f4e4585f60c61667881
+  $tc'Ace2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Ace3) -}
+e09d86c4a6859ed03fd63c5b174de6ef
+  $tc'Ace3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Ace"#) -}
+dc782efb37a1425b14ddd6a30d4328b2
+  $tc'Card :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3424144291597604983##
+                   4228203574835346606##
+                   Cards.$trModule
+                   Cards.$tc'Card2
+                   0#
+                   Cards.$tc'Card1) -}
+f52618493e71c809e8538a081b089fce
+  $tc'Card1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+181c3971108f2ea83716c2bbcb2a93de
+  $tc'Card2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Card3) -}
+bb9108508d39af85b860d61ce0d70982
+  $tc'Card3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Card"#) -}
+2af16d5c17e330123e75d6826a1baef0
+  $tc'Club :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1617170705920896273##
+                   4196694607106848670##
+                   Cards.$trModule
+                   Cards.$tc'Club2
+                   0#
+                   Cards.$tc'Club1) -}
+b13ba1701c0b79989ee199cb151cf696
+  $tc'Club1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+8cc0a925c0b52837cdb712e988a51687
+  $tc'Club2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Club3) -}
+4913664f015aa813b61a5275c1475500
+  $tc'Club3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Club"#) -}
+436aec4fb91be87e727be5902ff6f73d
+  $tc'Diamond :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7382368006231762233##
+                   9403214489225279068##
+                   Cards.$trModule
+                   Cards.$tc'Diamond1
+                   0#
+                   Cards.$tc'Club1) -}
+937bed81a236ce77ea1d4865082055e3
+  $tc'Diamond1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Diamond2) -}
+dca8e47b6e10d718eabbc59832c16db4
+  $tc'Diamond2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Diamond"#) -}
+d38301e145d7fac5c55b181d46606592
+  $tc'Eight :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13755938645026062470##
+                   12509639808995077115##
+                   Cards.$trModule
+                   Cards.$tc'Eight1
+                   0#
+                   Cards.$tc'Ace1) -}
+3424734400189e13336f8a682dc580dd
+  $tc'Eight1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Eight2) -}
+61fbec5fd011206f0380bc36358bf6ca
+  $tc'Eight2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Eight"#) -}
+93d8508471a1111e2b807e878b97e424
+  $tc'Five :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14969813592934506097##
+                   4524750615916863209##
+                   Cards.$trModule
+                   Cards.$tc'Five1
+                   0#
+                   Cards.$tc'Ace1) -}
+18d3114f6aba5c5e0e1f0aaec9b48071
+  $tc'Five1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Five2) -}
+6564f524d491ac729e2c978ed188d16d
+  $tc'Five2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Five"#) -}
+4fd3bd4017665e442157dec48831e3d8
+  $tc'Four :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10843533138660886231##
+                   11146269280130494764##
+                   Cards.$trModule
+                   Cards.$tc'Four1
+                   0#
+                   Cards.$tc'Ace1) -}
+3e6e329107e7aa9bbd4a6856c35eafb9
+  $tc'Four1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Four2) -}
+6f334ebacfd4d21ffa04fed26c764557
+  $tc'Four2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Four"#) -}
+b42a44b90cd743b557c81ff78fd7029b
+  $tc'Heart :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12873726228579024849##
+                   2306670725115470128##
+                   Cards.$trModule
+                   Cards.$tc'Heart1
+                   0#
+                   Cards.$tc'Club1) -}
+2d203188d6ab6b2eb9916891b1e97b41
+  $tc'Heart1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Heart2) -}
+20a1b5a24f1a5bf9ff91acb661452bdd
+  $tc'Heart2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Heart"#) -}
+65c13463cb4317094aae6d4b9296c7c3
+  $tc'Jack :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2502611339371638165##
+                   17018863787601765417##
+                   Cards.$trModule
+                   Cards.$tc'Jack1
+                   0#
+                   Cards.$tc'Ace1) -}
+52e98172c2f14fa1febac42c7058d850
+  $tc'Jack1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Jack2) -}
+5b84457216f81655eaa8193182e11702
+  $tc'Jack2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Jack"#) -}
+07648b104297947780365df11136ac9a
+  $tc'King :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13396838672971848524##
+                   8816612215647314546##
+                   Cards.$trModule
+                   Cards.$tc'King1
+                   0#
+                   Cards.$tc'Ace1) -}
+b2d0ddba9e0c9a7a3ecf9cd720516ab1
+  $tc'King1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'King2) -}
+a0649d1b23f2241544ca084c56cbcaa1
+  $tc'King2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'King"#) -}
+1de21502487e86a086770ff837ce6926
+  $tc'Nine :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11468072302341126361##
+                   2078706364539013169##
+                   Cards.$trModule
+                   Cards.$tc'Nine1
+                   0#
+                   Cards.$tc'Ace1) -}
+08cd73c19380f06ba49f7a8f111ca258
+  $tc'Nine1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Nine2) -}
+26a4ae5297983e92ab4b12792e27d70b
+  $tc'Nine2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Nine"#) -}
+7f4662658b1cfe3d95dd42f04e6a7cc8
+  $tc'Queen :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2745543357399761064##
+                   2833580431558085515##
+                   Cards.$trModule
+                   Cards.$tc'Queen1
+                   0#
+                   Cards.$tc'Ace1) -}
+64765cfd8fa9056b9bb176fe448c65ac
+  $tc'Queen1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Queen2) -}
+fe5050140feb85a4974eaee4248f7102
+  $tc'Queen2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Queen"#) -}
+46fc9bf8e435dbfe3479d1a826149c2c
+  $tc'Seven :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12768239559317624858##
+                   17906060313998834339##
+                   Cards.$trModule
+                   Cards.$tc'Seven1
+                   0#
+                   Cards.$tc'Ace1) -}
+653649798bdeb47578faaf72e09ccacb
+  $tc'Seven1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Seven2) -}
+0c137ed53f6be4405077a56937778f51
+  $tc'Seven2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Seven"#) -}
+67501f74940b663fac0cb1d15ace1424
+  $tc'Six :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14553427921630355443##
+                   6229466507831912044##
+                   Cards.$trModule
+                   Cards.$tc'Six1
+                   0#
+                   Cards.$tc'Ace1) -}
+9441fe1e18376d44fd9f89bb584ecff2
+  $tc'Six1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Six2) -}
+e7b54779d01aa74593d29df924921440
+  $tc'Six2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Six"#) -}
+84b33d1404c8977e6ef6ed0ec401edd9
+  $tc'Spade :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17201389634499338831##
+                   15759095879614325959##
+                   Cards.$trModule
+                   Cards.$tc'Spade1
+                   0#
+                   Cards.$tc'Club1) -}
+9253e1a872c933edff6255949e2ebc64
+  $tc'Spade1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Spade2) -}
+fe31f83e683449d30afe95161d87872f
+  $tc'Spade2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Spade"#) -}
+5fca568fd83d7ecb1d3f527275aba167
+  $tc'Ten :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17103147189285952635##
+                   7890120955240156184##
+                   Cards.$trModule
+                   Cards.$tc'Ten1
+                   0#
+                   Cards.$tc'Ace1) -}
+2f9b297a302aa6939179f9889dc9db3d
+  $tc'Ten1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Ten2) -}
+93436b81ded7ddc88f12ba966ccad051
+  $tc'Ten2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Ten"#) -}
+e59caceb0205925e0d7c9be35afb997b
+  $tc'Three :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7391056198988605483##
+                   7257179827049143875##
+                   Cards.$trModule
+                   Cards.$tc'Three1
+                   0#
+                   Cards.$tc'Ace1) -}
+cc0e000a1580771d06f46806502e44fa
+  $tc'Three1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Three2) -}
+6ee814454b06193ba653e2c45f451a5b
+  $tc'Three2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Three"#) -}
+cef2a175579684cb8f7e27bf8140f43a
+  $tc'Two :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11612296557068277127##
+                   11841603822851480531##
+                   Cards.$trModule
+                   Cards.$tc'Two1
+                   0#
+                   Cards.$tc'Ace1) -}
+cc5f2ec10ea3da09f3a31275cce0c56d
+  $tc'Two1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tc'Two2) -}
+8ab3908ceea3e18fed549122f730d76c
+  $tc'Two2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Two"#) -}
+ef48af8ea2065bc260f31f6da79956ff
+  $tcCard :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5879081301056961874##
+                   16995710137896760468##
+                   Cards.$trModule
+                   Cards.$tcCard1
+                   0#
+                   GHC.Types.krep$*) -}
+30707679c578534b9eaa835327860d49
+  $tcCard1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tcCard2) -}
+8d1b409257654e98317014ec7fb02b7d
+  $tcCard2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Card"#) -}
+95f47dff184c88dd53d91471e0c175b6
+  $tcRank :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9151706316510602238##
+                   559423334016085389##
+                   Cards.$trModule
+                   Cards.$tcRank1
+                   0#
+                   GHC.Types.krep$*) -}
+62c1106d928add093d346f8010f2f9f2
+  $tcRank1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tcRank2) -}
+d1d73e1144c832d9f21db1a609f82a37
+  $tcRank2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Rank"#) -}
+35cf2e89e0807b51cecce7a201f7f62b
+  $tcSuit :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18279041305491710345##
+                   14222980794539192811##
+                   Cards.$trModule
+                   Cards.$tcSuit1
+                   0#
+                   GHC.Types.krep$*) -}
+24e968d2deb81087fffd672208fd3a6b
+  $tcSuit1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$tcSuit2) -}
+ab4f3b9c35e8be45ff2f94d3a2057ff6
+  $tcSuit2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Suit"#) -}
+23d9778180a89a0971ac77c103b029d0
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Cards.$trModule3 Cards.$trModule1) -}
+2e113bbbda8d63c2be7f3611148a86cf
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$trModule2) -}
+a3b86d5806662ab63bd86ddf973500df
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Cards"#) -}
+8d10ebce1bbf85ebe63865f992a78740
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Cards.$trModule4) -}
+0973d9ca938f2b753f04976c5beccf95
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("hearts-0.1.0.0-HFI8OJwlE7V2tI6leOF0kf"#) -}
+65914f1a61040fc2dabdc111d7459ea9
+  $w$c== ::
+    Cards.Suit
+    -> Cards.Rank -> Cards.Suit -> Cards.Rank -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><S,1*U><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: Cards.Suit)
+                   (ww1 :: Cards.Rank)
+                   (ww2 :: Cards.Suit)
+                   (ww3 :: Cards.Rank) ->
+                 case ww of wild {
+                   Cards.Spade
+                   -> case ww2 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cards.Spade
+                        -> case GHC.Prim.dataToTag# @ Cards.Rank ww1 of a# { DEFAULT ->
+                           case GHC.Prim.dataToTag# @ Cards.Rank ww3 of b# { DEFAULT ->
+                           GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# a# b#) } } }
+                   Cards.Club
+                   -> case ww2 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cards.Club
+                        -> case GHC.Prim.dataToTag# @ Cards.Rank ww1 of a# { DEFAULT ->
+                           case GHC.Prim.dataToTag# @ Cards.Rank ww3 of b# { DEFAULT ->
+                           GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# a# b#) } } }
+                   Cards.Diamond
+                   -> case ww2 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cards.Diamond
+                        -> case GHC.Prim.dataToTag# @ Cards.Rank ww1 of a# { DEFAULT ->
+                           case GHC.Prim.dataToTag# @ Cards.Rank ww3 of b# { DEFAULT ->
+                           GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# a# b#) } } }
+                   Cards.Heart
+                   -> case ww2 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Cards.Heart
+                        -> case GHC.Prim.dataToTag# @ Cards.Rank ww1 of a# { DEFAULT ->
+                           case GHC.Prim.dataToTag# @ Cards.Rank ww3 of b# { DEFAULT ->
+                           GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# a# b#) } } } }) -}
+03c43b36d62bcdd20569b43dc5892433
+  $w$ccompare ::
+    Cards.Suit
+    -> Cards.Rank -> Cards.Suit -> Cards.Rank -> GHC.Types.Ordering
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><S,1*U><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: Cards.Suit)
+                   (ww1 :: Cards.Rank)
+                   (ww2 :: Cards.Suit)
+                   (ww3 :: Cards.Rank) ->
+                 case ww of wild {
+                   Cards.Spade
+                   -> case ww2 of wild1 {
+                        DEFAULT -> GHC.Types.LT
+                        Cards.Spade -> Cards.$fOrdCard_$ccompare1 ww1 ww3 }
+                   Cards.Club
+                   -> case ww2 of wild1 {
+                        Cards.Spade -> GHC.Types.GT
+                        Cards.Club -> Cards.$fOrdCard_$ccompare1 ww1 ww3
+                        Cards.Diamond -> GHC.Types.LT
+                        Cards.Heart -> GHC.Types.LT }
+                   Cards.Diamond
+                   -> case ww2 of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Cards.Diamond -> Cards.$fOrdCard_$ccompare1 ww1 ww3
+                        Cards.Heart -> GHC.Types.LT }
+                   Cards.Heart
+                   -> case ww2 of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Cards.Heart -> Cards.$fOrdCard_$ccompare1 ww1 ww3 } }) -}
+19277cfa8f5abc322f41b6b66787ef36
+  $w$creadsPrec :: GHC.Base.String -> [(Cards.Card, GHC.Base.String)]
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 Cards.$fReadCard_go (Cards.$w$creadsPrec1 w)) -}
+14641445c9cecb6d279c33641c171385
+  $w$creadsPrec1 ::
+    GHC.Base.String -> [(Cards.Suit, GHC.Base.String)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 case w of wild {
+                   [] -> GHC.Types.[] @ (Cards.Suit, GHC.Base.String)
+                   : s str
+                   -> case s of wild1 { GHC.Types.C# ds ->
+                      case ds of ds1 {
+                        DEFAULT -> GHC.Types.[] @ (Cards.Suit, GHC.Base.String)
+                        'C'#
+                        -> GHC.Types.:
+                             @ (Cards.Suit, GHC.Base.String)
+                             (Cards.Club, str)
+                             (GHC.Types.[] @ (Cards.Suit, GHC.Base.String))
+                        'D'#
+                        -> GHC.Types.:
+                             @ (Cards.Suit, GHC.Base.String)
+                             (Cards.Diamond, str)
+                             (GHC.Types.[] @ (Cards.Suit, GHC.Base.String))
+                        'H'#
+                        -> GHC.Types.:
+                             @ (Cards.Suit, GHC.Base.String)
+                             (Cards.Heart, str)
+                             (GHC.Types.[] @ (Cards.Suit, GHC.Base.String))
+                        'S'#
+                        -> GHC.Types.:
+                             @ (Cards.Suit, GHC.Base.String)
+                             (Cards.Spade, str)
+                             (GHC.Types.[] @ (Cards.Suit, GHC.Base.String)) } } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $w$creadsPrec2 ::
+    GHC.Base.String -> [(Cards.Rank, GHC.Base.String)]
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 case w of wild {
+                   [] -> GHC.Types.[] @ (Cards.Rank, GHC.Base.String)
+                   : s str
+                   -> case s of wild1 { GHC.Types.C# ds ->
+                      case ds of ds1 {
+                        DEFAULT
+                        -> let {
+                             $j :: [(Cards.Rank, GHC.Base.String)] <join 0>
+                             = case ds1 of wild2 {
+                                 DEFAULT -> GHC.Types.[] @ (Cards.Rank, [GHC.Types.Char])
+                                 '1'#
+                                 -> case str of wild3 {
+                                      [] -> GHC.Types.[] @ (Cards.Rank, [GHC.Types.Char])
+                                      : ds2 rest
+                                      -> case ds2 of wild4 { GHC.Types.C# ds3 ->
+                                         case ds3 of ds4 {
+                                           DEFAULT -> GHC.Types.[] @ (Cards.Rank, [GHC.Types.Char])
+                                           '0'#
+                                           -> GHC.Types.:
+                                                @ (Cards.Rank, [GHC.Types.Char])
+                                                (Cards.Ten, rest)
+                                                (GHC.Types.[]
+                                                   @ (Cards.Rank, [GHC.Types.Char])) } } } }
+                           } in
+                           case GHC.Prim.geChar# ds1 '2'# of lwild {
+                             DEFAULT -> $j
+                             1#
+                             -> case GHC.Prim.leChar# ds1 '9'# of lwild1 {
+                                  DEFAULT -> $j
+                                  1#
+                                  -> GHC.Types.:
+                                       @ (Cards.Rank, [GHC.Types.Char])
+                                       (let {
+                                          x :: GHC.Prim.Int# = GHC.Prim.-# (GHC.Prim.ord# ds1) 50#
+                                        } in
+                                        case GHC.Prim.>=# x 0# of lwild2 {
+                                          DEFAULT -> Cards.$wlvl x
+                                          1#
+                                          -> case GHC.Prim.<=# x 12# of lwild3 {
+                                               DEFAULT -> Cards.$wlvl x
+                                               1# -> GHC.Prim.tagToEnum# @ Cards.Rank x } },
+                                        str)
+                                       (GHC.Types.[] @ (Cards.Rank, [GHC.Types.Char])) } }
+                        'A'#
+                        -> GHC.Types.:
+                             @ (Cards.Rank, GHC.Base.String)
+                             (Cards.Ace, str)
+                             (GHC.Types.[] @ (Cards.Rank, GHC.Base.String))
+                        'J'#
+                        -> GHC.Types.:
+                             @ (Cards.Rank, GHC.Base.String)
+                             (Cards.Jack, str)
+                             (GHC.Types.[] @ (Cards.Rank, GHC.Base.String))
+                        'K'#
+                        -> GHC.Types.:
+                             @ (Cards.Rank, GHC.Base.String)
+                             (Cards.King, str)
+                             (GHC.Types.[] @ (Cards.Rank, GHC.Base.String))
+                        'Q'#
+                        -> GHC.Types.:
+                             @ (Cards.Rank, GHC.Base.String)
+                             (Cards.Queen, str)
+                             (GHC.Types.[] @ (Cards.Rank, GHC.Base.String)) } } }) -}
+be799c5a7a2ca8a47220dc739c8d13f5
+  $w$cshow :: Cards.Suit -> Cards.Rank -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: Cards.Suit) (ww1 :: Cards.Rank) ->
+                 let {
+                   n :: [GHC.Types.Char]
+                   = case ww1 of wild {
+                       DEFAULT
+                       -> case GHC.Prim.dataToTag# @ Cards.Rank wild of a# { DEFAULT ->
+                          case GHC.Show.$wshowSignedInt
+                                 0#
+                                 (GHC.Prim.+# a# 2#)
+                                 (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                          GHC.Types.: @ GHC.Types.Char ww5 ww6 } }
+                       Cards.Jack -> Cards.$fShowCard16
+                       Cards.Queen -> Cards.$fShowCard14
+                       Cards.King -> Cards.$fShowCard12
+                       Cards.Ace -> Cards.$fShowCard10 }
+                 } in
+                 case ww of wild {
+                   Cards.Spade -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard8 n
+                   Cards.Club -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard6 n
+                   Cards.Diamond -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard4 n
+                   Cards.Heart
+                   -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard2 n }) -}
+6952db1e2e857164d2f2bcb225062159
+  $w$cshowsPrec ::
+    Cards.Suit -> Cards.Rank -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 3, Strictness: <S,1*U><L,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: Cards.Suit)
+                   (ww1 :: Cards.Rank)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   n :: [GHC.Types.Char]
+                   = case ww1 of wild {
+                       DEFAULT
+                       -> case GHC.Prim.dataToTag# @ Cards.Rank wild of a# { DEFAULT ->
+                          case GHC.Show.$wshowSignedInt
+                                 0#
+                                 (GHC.Prim.+# a# 2#)
+                                 (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                            w } }
+                       Cards.Jack -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard16 w
+                       Cards.Queen -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard14 w
+                       Cards.King -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard12 w
+                       Cards.Ace -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard10 w }
+                 } in
+                 case ww of wild {
+                   Cards.Spade -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard8 n
+                   Cards.Club -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard6 n
+                   Cards.Diamond -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard4 n
+                   Cards.Heart
+                   -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard2 n }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $w$cshowsPrec1 :: Cards.Rank -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (w :: Cards.Rank) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   DEFAULT
+                   -> case GHC.Prim.dataToTag# @ Cards.Rank wild of a# { DEFAULT ->
+                      case GHC.Show.$wshowSignedInt
+                             0#
+                             (GHC.Prim.+# a# 2#)
+                             (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                      GHC.Base.++
+                        @ GHC.Types.Char
+                        (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                        w1 } }
+                   Cards.Jack -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard16 w1
+                   Cards.Queen -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard14 w1
+                   Cards.King -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard12 w1
+                   Cards.Ace
+                   -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard10 w1 }) -}
+14641445c9cecb6d279c33641c171385
+  $w$cshowsPrec2 :: Cards.Suit -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (w :: Cards.Suit) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Cards.Spade -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard8 w1
+                   Cards.Club -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard6 w1
+                   Cards.Diamond -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard4 w1
+                   Cards.Heart
+                   -> GHC.Base.++ @ GHC.Types.Char Cards.$fShowCard2 w1 }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $w$ctoEnum :: GHC.Prim.Int# -> Cards.Rank
+  {- Arity: 1, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Prim.>=# ww 0# of lwild {
+                   DEFAULT -> Cards.$wlvl ww
+                   1#
+                   -> case GHC.Prim.<=# ww 12# of lwild1 {
+                        DEFAULT -> Cards.$wlvl ww
+                        1# -> GHC.Prim.tagToEnum# @ Cards.Rank ww } }) -}
+14641445c9cecb6d279c33641c171385
+  $w$ctoEnum1 :: GHC.Prim.Int# -> Cards.Suit
+  {- Arity: 1, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Prim.>=# ww 0# of lwild {
+                   DEFAULT -> Cards.$wlvl1 ww
+                   1#
+                   -> case GHC.Prim.<=# ww 3# of lwild1 {
+                        DEFAULT -> Cards.$wlvl1 ww
+                        1# -> GHC.Prim.tagToEnum# @ Cards.Suit ww } }) -}
+e6943ba6fca54753ba45a70d571a4da2
+  $wlvl :: GHC.Prim.Int# -> Cards.Rank
+  {- Arity: 1, Strictness: <B,U>x, Inline: [2] -}
+14641445c9cecb6d279c33641c171385
+  $wlvl1 :: GHC.Prim.Int# -> Cards.Suit
+  {- Arity: 1, Strictness: <B,U>x, Inline: [2] -}
+19277cfa8f5abc322f41b6b66787ef36
+  data Card = Card Cards.Suit Cards.Rank
+e6943ba6fca54753ba45a70d571a4da2
+  data Rank
+    = Two
+    | Three
+    | Four
+    | Five
+    | Six
+    | Seven
+    | Eight
+    | Nine
+    | Ten
+    | Jack
+    | Queen
+    | King
+    | Ace
+14641445c9cecb6d279c33641c171385
+  data Suit = Spade | Club | Diamond | Heart
+instance GHC.Enum.Bounded [Cards.Rank] = Cards.$fBoundedRank
+instance GHC.Enum.Bounded [Cards.Suit] = Cards.$fBoundedSuit
+instance GHC.Enum.Enum [Cards.Rank] = Cards.$fEnumRank
+instance GHC.Enum.Enum [Cards.Suit] = Cards.$fEnumSuit
+instance GHC.Classes.Eq [Cards.Card] = Cards.$fEqCard
+instance GHC.Classes.Eq [Cards.Rank] = Cards.$fEqRank
+instance GHC.Classes.Eq [Cards.Suit] = Cards.$fEqSuit
+instance Control.DeepSeq.NFData [Cards.Card] = Cards.$fNFDataCard
+instance GHC.Classes.Ord [Cards.Card] = Cards.$fOrdCard
+instance GHC.Classes.Ord [Cards.Rank] = Cards.$fOrdRank
+instance GHC.Classes.Ord [Cards.Suit] = Cards.$fOrdSuit
+instance GHC.Read.Read [Cards.Card] = Cards.$fReadCard
+instance GHC.Read.Read [Cards.Rank] = Cards.$fReadRank
+instance GHC.Read.Read [Cards.Suit] = Cards.$fReadSuit
+instance GHC.Show.Show [Cards.Card] = Cards.$fShowCard
+instance GHC.Show.Show [Cards.Rank] = Cards.$fShowRank
+instance GHC.Show.Show [Cards.Suit] = Cards.$fShowSuit
+trusted: trustworthy
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+
