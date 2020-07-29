@@ -51,15 +51,14 @@ The code provided uses the Safe pragma to make sure the code you use is okay to 
 
 ### Memory
 An important concept during a game is memory. In this implementation, you can decide what information you want to save between turns, the only condition is it needs to be converted to a `String`. This is shown in the type of the play function:
-
-  type PlayFunc
-    =  PlayerId -- ^ this player's Id so they can identify themselves in the bids and tricks
-    -> [Card]   -- ^ the player's current hand
-    -> [(Card, PlayerId)]   -- ^ cards played in the current trick, i.e., previous players cards for 
-                            -- this trick          	 
-    -> Maybe ([(Card, PlayerId)], String) -- ^ (all the cards played in the previous trick, "memory")
-    -> (Card, String) -- ^ should return: player's chosen card and new memory
-
+```
+type PlayFunc
+=  PlayerId -- ^ this player's Id so they can identify themselves in the bids and tricks
+-> [Card]   -- ^ the player's current hand
+-> [(Card, PlayerId)]   -- ^ cards played in the current trick, i.e., previous players cards for this trick
+-> Maybe ([(Card, PlayerId)], String) -- ^ (all the cards played in the previous trick, "memory")
+-> (Card, String) -- ^ should return: player's chosen card and new memory
+```
 The memory is the last parameter to the function, of type: `Maybe` (*cards from the previous trick, previous memory*). 
 In the first trick, this will be `Nothing`. Good use of the memory is one of the key features we will evaluate.
 
