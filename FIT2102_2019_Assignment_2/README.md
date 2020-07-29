@@ -3,7 +3,7 @@ Task Description:
 You will create an autonomous player for the card game **Hearts**. You will do this by filling in the undefined playCard function in the Player.hs file that you receive in the code bundle. 
 
 ### The Game
-The game of [Hearts] (https://en.wikipedia.org/wiki/Hearts_(card_game)) is a trick-taking game where the goal to score as *few points* as possible.  All cards in the Hearts are worth one point, and the Queen of Spade is worth 13.  Your task will be to implement a simple AI to beat other players (students and staff) at this game.
+The game of [Hearts](https://en.wikipedia.org/wiki/Hearts_(card_game)) is a trick-taking game where the goal to score as *few points* as possible.  All cards in the Hearts are worth one point, and the Queen of Spade is worth 13.  Your task will be to implement a simple AI to beat other players (students and staff) at this game.
 
 There will be two versions of the game:
 1. A two-player version, which will be used to assess the *strength* of your player.  This version will use calibrated opponents and can be seen as a test.
@@ -40,7 +40,7 @@ Your task is to write a Player for Hearts which will implement the following fun
 `playCard :: PlayFunc -- play a card from your hand during a trick`
 
 You will have two tasks during the assignment period:
-1. Upload your player to [the tournament] (https://fit2102.monash/uploader/) so you can evaluate your player's performance.
+1. Upload your player to [the tournament](https://fit2102.monash/uploader/) so you can evaluate your player's performance.
 2. Upload your Player.hs file to Moodle before Friday 18th October 11:55pm.
 
 Before uploading your player, please check that the following run:
@@ -75,8 +75,8 @@ When you submit your player, we will run the test suite on it (stack test). The 
 After the tests have run successfully, your player will join the tournament by immediately playing ten games against selected opponents. After that, it will be selected at random to play against newcomers.
 
 The server for the course is at <https://fit2102.monash> with the following pages:
-- [The uploader] (https://fit2102.monash/uploader/): after logging in, this page will allow you to upload your code and compete in the tournament.
-- [The ladder] (https://fit2102.monash/ladder.php): this page will display the scores of the last tournament run.
+- [The uploader](https://fit2102.monash/uploader/): after logging in, this page will allow you to upload your code and compete in the tournament.
+- [The ladder](https://fit2102.monash/ladder.php): this page will display the scores of the last tournament run.
 
 Once you upload your player, you will see two links on the page:
 - `home.php`: shows your current ranking, last upload, and previous games played.
